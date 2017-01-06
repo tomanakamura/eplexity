@@ -1,0 +1,61 @@
+// user profile in sidebar
+.user {
+  display: flex;
+  align-items: center;
+  padding: 20px 30px 20px 20px;
+
+
+  &__avatar {
+    position: relative;
+
+    img {
+      border-radius: 50%;
+      width: 34px;
+      height: 34px;
+      object-fit: cover;
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    right: -13px;
+    top: -8px;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #fff;
+    background-color: $brand-secondary;
+    color: #fff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    line-height: 19px;
+    border-radius: 50%;
+  }
+
+  &__desc {
+    padding-left: 20px;
+    flex-grow: 1;
+  }
+
+  &__name {
+    color: #4a4a4a;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+    line-height: 14px;
+  }
+
+  &__role {
+    color: #9b9b9b;
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 700;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+
+  &__caret {
+    color:$brand-primary;
+  }
+}

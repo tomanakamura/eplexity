@@ -1,0 +1,617 @@
+@@include('partials/header.html')
+
+@@include('partials/sidebar.html')
+
+<div class="content">
+  <form action="">
+    <div class="section js-section">
+      <header class="section__header section__header--sticky js-section-header">
+        <div class="row row--flex row--flex-middle">
+          <div class="col-xs-12 col-sm-6 col-xl-6">
+            <div class="section__top mb-0">
+              <div class="section__icon"><img src="images/icons/servers.svg" width="24" alt=""></div>
+              <h2 class="section__heading">Add server</h2>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-xl-6 text-right">
+            <!--progress-square must have unique id for initialize in script (see progress-square.js) -->
+            <div class="progress-square" id="add-progress">
+              <p class="progress-square__text"><span class="progress-square__percentage">0%</span> completed</p>
+              <div class="progress-square__body">
+                <div class="progress-square__line"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="section__content">
+        <!-- order list with blue counter -->
+        <ol class="order-list">
+
+          <!-- order list item begin-->
+          <li class="order-list__item">
+            <div class="order-list__header">
+              <span class="order-list__number number">1</span><h3 class="order-list__heading">Let's choose an image</h3>
+            </div>
+            <div class="row mb-3">
+              <div class="col-xs-8">
+                <p>An image gets you up and running without having to configure the same thing over and over again.  Think of it as a complete clone of a Hard Disk and Operating System.</p>
+              </div>
+            </div>
+
+            <!-- tabs wrapper -->
+            <div class="mb-2">
+              <div class="row mb-3">
+                <div class="col-xs-8">
+                  <!-- Nav tabs  .active class for active  section link -->
+                  <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#images" data-toggle="tab">IMAGES</a></li>
+                    <li role="presentation"><a href="#applications"  data-toggle="tab">Applications</a></li>
+                    <li role="presentation"><a href="#snapshots" data-toggle="tab">Snapshots</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Tab panes active class for visible section -->
+              <div class="tab-content">
+                <div class="tab-pane active" id="images">
+                  <div class="card-grid">
+                    <label class="card-grid__item card-label">
+                      <input type="radio" name="image" class="card-label__input">
+                      <div class="card card--icon card--icon-center">
+                        <div class="card__image">
+                          <img src="images/ubuntu.png" alt="">
+                        </div>
+                        <h5 class="card__heading text-bold">Standard LAMP on Ubuntu</h5>
+                      </div>
+                    </label>
+                    <label class="card-grid__item card-label">
+                      <input type="radio" name="image" class="card-label__input">
+                      <div class="card card--icon card--icon-center">
+                        <div class="card__image">
+                          <img src="images/phpmyadmin.jpg" alt="">
+                        </div>
+                        <h5 class="card__heading text-bold">Standard MySQL 5.5 on Ubuntu</h5>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="tab-pane" id="applications">
+                  <div class="card-grid">
+                    <label class="card-grid__item card-label">
+                      <input type="radio" name="app" class="card-label__input">
+                      <div class="card card--icon card--icon-small">
+                        <div class="card__image">
+                          <img src="images/t_discourse.png" alt="">
+                        </div>
+                        <h5 class="card__heading text-bold">Discourse on 14.04</h5>
+                      </div>
+                    </label>
+                    <label class="card-grid__item card-label">
+                      <input type="radio" name="app" class="card-label__input">
+                      <div class="card card--icon card--icon-small">
+                        <div class="card__image">
+                          <img src="images/t_django.png" alt="">
+                        </div>
+                        <h5 class="card__heading text-bold">Django 1.8.7 on 16.04</h5>
+                      </div>
+                    </label>
+                    <label class="card-grid__item card-label">
+                      <input type="radio" name="app" class="card-label__input">
+                      <div class="card card--icon card--icon-small">
+                        <div class="card__image">
+                          <img src="images/t_docker.png" alt="">
+                        </div>
+                        <h5 class="card__heading text-bold">Docker 1.12.4 on 16.04</h5>
+                      </div>
+                    </label>
+                    <label class="card-grid__item card-label">
+                      <input type="radio" name="app" class="card-label__input">
+                      <div class="card card--icon card--icon-small">
+                        <div class="card__image">
+                          <img src="images/t_drone.png" alt="">
+                        </div>
+                        <h5 class="card__heading text-bold">Drone 0.4 on 14.04</h5>
+                      </div>
+                    </label>
+                    <label class="card-grid__item card-label">
+                      <input type="radio" name="app" class="card-label__input">
+                      <div class="card card--icon card--icon-small">
+                        <div class="card__image">
+                          <img src="images/t_horizon.png" alt="">
+                        </div>
+                        <h5 class="card__heading text-bold">Horizon w/ RethinkDB...</h5>
+                      </div>
+                    </label>
+                    <label class="card-grid__item card-label">
+                      <input type="radio" name="app" class="card-label__input">
+                      <div class="card card--icon card--icon-small">
+                        <div class="card__image">
+                          <img src="images/t_wp.png" alt="">
+                        </div>
+                        <h5 class="card__heading text-bold">Wordpress 4.7 on 16.04</h5>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+
+               <div class="tab-pane" id="snapshots">
+                 <div class="card-grid">
+                   <label class="card-grid__item card-label">
+                     <input type="radio" name="snapshot" class="card-label__input">
+                     <div class="card card--icon card--icon-small">
+                       <div class="card__image">
+                         <img src="images/icons/servers.svg" alt="">
+                       </div>
+                       <h5 class="card__heading text-bold">Ubuntu eplex 2016-12-16</h5>
+                     </div>
+                   </label>
+                   <label class="card-grid__item card-label">
+                     <input type="radio" name="snapshot" class="card-label__input">
+                     <div class="card card--icon card--icon-small">
+                       <div class="card__image">
+                         <img src="images/icons/servers.svg" alt="">
+                       </div>
+                       <h5 class="card__heading text-bold">Ubuntu eplex 2016-12-16</h5>
+                     </div>
+                   </label>
+                   <label class="card-grid__item card-label">
+                     <input type="radio" name="snapshot" class="card-label__input">
+                     <div class="card card--icon card--icon-small">
+                       <div class="card__image">
+                         <img src="images/icons/servers.svg" alt="">
+                       </div>
+                       <h5 class="card__heading text-bold">Ubuntu eplex 2016-12-16</h5>
+                     </div>
+                   </label>
+                   <label class="card-grid__item card-label">
+                     <input type="radio" name="snapshot" class="card-label__input">
+                     <div class="card card--icon card--icon-small">
+                       <div class="card__image">
+                         <img src="images/icons/servers.svg" alt="">
+                       </div>
+                       <h5 class="card__heading text-bold">Ubuntu eplex 2016-12-16</h5>
+                     </div>
+                   </label>
+                   <label class="card-grid__item card-label">
+                     <input type="radio" name="snapshot" class="card-label__input">
+                     <div class="card card--icon card--icon-small">
+                       <div class="card__image">
+                         <img src="images/icons/servers.svg" alt="">
+                       </div>
+                       <h5 class="card__heading text-bold">Ubuntu eplex 2016-12-16</h5>
+                     </div>
+                   </label>
+                   <label class="card-grid__item card-label">
+                     <input type="radio" name="snapshot" class="card-label__input">
+                     <div class="card card--icon card--icon-small">
+                       <div class="card__image">
+                         <img src="images/icons/servers.svg" alt="">
+                       </div>
+                       <h5 class="card__heading text-bold">Ubuntu eplex 2016-12-16</h5>
+                     </div>
+                   </label>
+                 </div>
+               </div>
+             </div>
+            </div>
+            <!-- tabs wrapper end-->
+          </li>
+          <!-- order list item end-->
+
+          <li class="order-list__item">
+            <div class="order-list__header">
+              <span class="order-list__number number">2</span><h3 class="order-list__heading">Choose a server size</h3>
+            </div>
+            <div class="row mb-3">
+              <div class="col-xs-8">
+                <p>This will determine how much of the cloud platform this server lives on will consume.  If you choose a server that's larger than the cloud platform it lives on, we'll bump up the size of your cloud platform to handle it. class: blocks</p>
+              </div>
+            </div>
+
+            <!-- card grid custom layout for cards; card-grid--5  five in line on large screens-->
+            <div class="card-grid card-grid--5 mb-3">
+              <!-- card-label - label wrapper for card that is used with checkbox or radio input-->
+              <label class="card-grid__item card-label">
+                <input type="radio" name="size" class="card-label__input">
+                <!-- card size  can have .card__label like RECOMMENDED; card__label--info - blue background -->
+                <div class="card card--size">
+                  <!-- <div class="card__label card__label--info">RECOMMENDED</div> -->
+                  <div class="card__header">
+                    <div class="card__image">
+                      <img src="images/icons/x1.svg" alt="" width="34">
+                    </div>
+                    <h4 class="card__heading">X1</h4>
+                  </div>
+
+                  <div class="card__content">
+                    <div class="card__row">
+                      <p class="card__val text-bold">1</p>
+                      <p class="card__key text-light">vCPUS</p>
+                    </div>
+
+                    <div class="card__row">
+                      <p class="card__val text-bold">1 GB</p>
+                      <p class="card__key text-light">vRAM</p>
+                    </div>
+
+                    <div class="card__row">
+                      <p class="card__val text-bold">30 GB</p>
+                      <p class="card__key text-light">Storage</p>
+                    </div>
+
+                    <div class="card__row">
+                      <p class="card__val text-bold">2 TB</p>
+                      <p class="card__key text-light">Net Egress</p>
+                    </div>
+
+                    <div class="card__row">
+                      <p class="card__val text-bold">3</p>
+                      <p class="card__key text-light">Ver</p>
+                    </div>
+                  </div>
+
+                  <div class="card__footer">
+                    <h4 class="card__price">$50</h4>
+                    <div class="text-light">PER MONTH</div>
+                  </div>
+                </div>
+                <!-- card size end -->
+              </label>
+              <label class="card-grid__item card-label">
+                <input type="radio" name="size" class="card-label__input">
+                <div class="card card--size">
+                  <div class="card__header">
+                    <div class="card__image">
+                      <img src="images/icons/x2.svg" alt="" width="34">
+                    </div>
+                    <h4 class="card__heading">X2 </h4>
+                  </div>
+
+                  <div class="card__content">
+                    <div class="card__row">
+                      <p class="card__val text-bold">2</p>
+                      <p class="card__key text-light">vCPUS</p>
+                    </div>
+
+                    <div class="card__row">
+                      <p class="card__val text-bold">1 GB</p>
+                      <p class="card__key text-light">vRAM</p>
+                    </div>
+
+                    <div class="card__row">
+                      <p class="card__val text-bold">30 GB</p>
+                      <p class="card__key text-light">Storage</p>
+                    </div>
+
+                    <div class="card__row">
+                      <p class="card__val text-bold">2 TB</p>
+                      <p class="card__key text-light">Net Egress</p>
+                    </div>
+
+                    <div class="card__row">
+                      <p class="card__val text-bold">3</p>
+                      <p class="card__key text-light">Ver</p>
+                    </div>
+                  </div>
+
+                  <div class="card__footer">
+                    <h4 class="card__price">$70</h4>
+                    <div class="text-light">PER MONTH</div>
+                  </div>
+                </div>
+              </label>
+              <label class="card-grid__item card-label">
+                <input type="radio" name="size" class="card-label__input">
+                <div class="card card--size">
+                  <div class="card__label card__label--info">RECOMMENDED</div>
+                  <div class="card__header">
+                    <div class="card__image">
+                      <img src="images/icons/x3.svg" alt="" width="34">
+                    </div>
+                    <h4 class="card__heading">X3</h4>
+                  </div>
+
+                  <div class="card__content">
+                    <div class="card__row">
+                      <p class="card__val text-bold">4</p>
+                      <p class="card__key text-light">vCPUS</p>
+                    </div>
+
+                    <div class="card__row">
+                      <p class="card__val text-bold">1 GB</p>
+                      <p class="card__key text-light">vRAM</p>
+                    </div>
+
+                    <div class="card__row">
+                      <p class="card__val text-bold">30 GB</p>
+                      <p class="card__key text-light">Storage</p>
+                    </div>
+
+                    <div class="card__row">
+                      <p class="card__val text-bold">2 TB</p>
+                      <p class="card__key text-light">Net Egress</p>
+                    </div>
+
+                    <div class="card__row">
+                      <p class="card__val text-bold">3</p>
+                      <p class="card__key text-light">Ver</p>
+                    </div>
+                  </div>
+
+                  <div class="card__footer">
+                    <h4 class="card__price">$200</h4>
+                    <div class="text-light">PER MONTH</div>
+                  </div>
+                </div>
+              </label>
+              <label class="card-grid__item card-label">
+                <input type="radio" name="size" class="card-label__input">
+                <div class="card card--size">
+                  <div class="card__header">
+                    <div class="card__image">
+                      <img src="images/icons/x4.svg" alt="" width="34">
+                    </div>
+                    <h4 class="card__heading">X4</h4>
+                  </div>
+
+                  <div class="card__content">
+                    <div class="card__row">
+                      <p class="card__val text-bold">8</p>
+                      <p class="card__key text-light">vCPUS</p>
+                    </div>
+
+                    <div class="card__row">
+                      <p class="card__val text-bold">1 GB</p>
+                      <p class="card__key text-light">vRAM</p>
+                    </div>
+
+                    <div class="card__row">
+                      <p class="card__val text-bold">30 GB</p>
+                      <p class="card__key text-light">Storage</p>
+                    </div>
+
+                    <div class="card__row">
+                      <p class="card__val text-bold">2 TB</p>
+                      <p class="card__key text-light">Net Egress</p>
+                    </div>
+
+                    <div class="card__row">
+                      <p class="card__val text-bold">3</p>
+                      <p class="card__key text-light">Ver</p>
+                    </div>
+                  </div>
+
+                  <div class="card__footer">
+                    <h4 class="card__price">$240</h4>
+                    <div class="text-light">PER MONTH</div>
+                  </div>
+                </div>
+              </label>
+              <label class="card-grid__item card-label">
+                <input type="radio" name="size" class="card-label__input">
+                <div class="card card--size">
+                  <div class="card__header">
+                    <div class="card__image">
+                      <img src="images/icons/x5.svg" alt="" width="34">
+                    </div>
+                    <h4 class="card__heading">X5</h4>
+                  </div>
+
+                  <div class="card__content">
+                    <div class="card__row">
+                      <p class="card__val text-bold">16</p>
+                      <p class="card__key text-light">vCPUS</p>
+                    </div>
+
+                    <div class="card__row">
+                      <p class="card__val text-bold">1 GB</p>
+                      <p class="card__key text-light">vRAM</p>
+                    </div>
+
+                    <div class="card__row">
+                      <p class="card__val text-bold">30 GB</p>
+                      <p class="card__key text-light">Storage</p>
+                    </div>
+
+                    <div class="card__row">
+                      <p class="card__val text-bold">2 TB</p>
+                      <p class="card__key text-light">Net Egress</p>
+                    </div>
+
+                    <div class="card__row">
+                      <p class="card__val text-bold">3</p>
+                      <p class="card__key text-light">Ver</p>
+                    </div>
+                  </div>
+
+                  <div class="card__footer">
+                    <h4 class="card__price">$400</h4>
+                    <div class="text-light">PER MONTH</div>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </li>
+
+          <li class="order-list__item">
+            <div class="order-list__header">
+              <span class="order-list__number number">3</span><h3 class="order-list__heading">Which cloud platform?</h3>
+            </div>
+            <div class="row mb-3">
+              <div class="col-xs-8">
+                <p>Select which cloud platform you'd like this server to live on. The server will consume resources from that cloud platform.</p>
+              </div>
+            </div>
+
+            <div class="card-grid mb-2">
+              <label class="card-grid__item card-label">
+                <input type="radio" name="cloud" class="card-label__input">
+                <div class="card card--icon card--icon-large">
+                  <div class="card__image">
+                    <img src="images/ibm.png" alt="">
+                  </div>
+                  <div class="card__desc">
+                    <h5 class="card__heading text-bold">IBM SoftLayer</h5>
+                    <p class="card__rating">
+                      <img src="images/icons/goldstar.svg" alt="">
+                      <img src="images/icons/goldstar.svg" alt="">
+                      <img src="images/icons/goldstar.svg" alt="">
+                      <img src="images/icons/goldstar.svg" alt="">
+                      <img src="images/icons/goldstar.svg" alt="">
+                    </p>
+                    <p class="card__price text-bold">+ $ 113 <span class="text-light">/ MONTH</span></p>
+                  </div>
+                </div>
+              </label>
+              <label class="card-grid__item card-label">
+                <input type="radio" name="cloud" class="card-label__input">
+                <div class="card card--icon card--icon-large">
+                  <div class="card__image">
+                    <img src="images/aws.png" alt="">
+                  </div>
+                  <div class="card__desc">
+                    <h5 class="card__heading text-bold">AWS EC2</h5>
+                    <p class="card__rating">
+                      <img src="images/icons/goldstar.svg" alt="">
+                      <img src="images/icons/goldstar.svg" alt="">
+                      <img src="images/icons/goldstar.svg" alt="">
+                    </p>
+                    <p class="card__price text-bold">+ $ 125 <span class="text-light">/ MONTH</span></p>
+                  </div>
+                </div>
+              </label>
+            </div>
+          </li>
+
+          <li class="order-list__item mb-4">
+            <div class="order-list__header">
+              <span class="order-list__number number">4</span><h3 class="order-list__heading">What would you like on your server?</h3>
+            </div>
+            <div class="row mb-3">
+              <div class="col-xs-8">
+                <p>All of these products have been enabled in your marketplace, and are ready for instant use on your new servers. Choose the one you'd like!</p>
+              </div>
+            </div>
+
+            <div class="card-grid">
+              <label class="card-grid__item card-label">
+                  <input type="checkbox" name="" class="card-label__input">
+                <div class="card card--icon card--icon-top">
+                  <div class="card__image">
+                    <img src="images/icons/dashed-clock.svg" alt="">
+                  </div>
+                  <div class="card__desc">
+                    <h5 class="card__heading text-bold">Managed Backups</h5>
+                    <p class="card__text">Your own backup management team.</p>
+                    <p class="card__price text-bold">+ $ 113 <span class="text-light">/ MONTH</span></p>
+                  </div>
+                </div>
+              </label>
+              <label class="card-grid__item card-label">
+                <input type="checkbox" name="" class="card-label__input">
+                <div class="card card--icon card--icon-top">
+                  <div class="card__image">
+                    <img src="images/icons/monitoring.svg" alt="">
+                  </div>
+                  <div class="card__desc">
+                    <h5 class="card__heading text-bold">Server Monitoring</h5>
+                    <p class="card__text">Have someone monitor your server for you.</p>
+                    <p class="card__price text-bold">+ $ 113 <span class="text-light">/ MONTH</span></p>
+                  </div>
+                </div>
+              </label>
+              <label class="card-grid__item card-label">
+                <input type="checkbox" name="" class="card-label__input">
+                <div class="card card--icon card--icon-top">
+                  <div class="card__image">
+                    <img src="images/icons/support.svg" alt="">
+                  </div>
+                  <div class="card__desc">
+                    <h5 class="card__heading text-bold">System operator</h5>
+                    <p class="card__text">Have someone monitor your server for you.</p>
+                    <p class="card__price text-bold">+ $ 113 <span class="text-light">/ MONTH</span></p>
+                  </div>
+                </div>
+              </label>
+            </div>
+
+            <label class="checkbox"><input type="checkbox" name="" class="checkbox__input"><span class="checkbox__icon"></span> <span class="checkbox__label">No thanks, I like to do everything myself</span></label>
+          </li>
+
+          <li class="order-list__item">
+            <div class="order-list__header">
+              <span class="order-list__number number">5</span><h3 class="order-list__heading">Name your new server</h3>
+            </div>
+            <div class="row mb-3">
+              <div class="col-xs-8">
+                <p>This name will be used throughout the Eplexity CXOS interface. We recommend keeping it short an sweet, so that it's easy to identify in the future.</p>
+              </div>
+            </div>
+
+            <div class="row mb-2 js-servername-row">
+              <div class="col-xs-12 col-md-6 col-lg-6 col-xl-3">
+                <label>Server <span>1</span> Name</label>
+                <input type="text" name="server_name_1" class="form-control">
+              </div>
+            </div>
+
+            <a href="#" class="js-servername-add"><strong>+ Add another just like this one</strong></a>
+          </li>
+        </ol>
+
+      </div>
+
+      <footer class="section__footer is-active js-section-footer">
+        <div class="summary">
+          <div class="summary__col">
+            <div class="summary__image">
+              <img src="images/ubuntu.png" alt="">
+            </div>
+            <div class="summary__desc">
+              <div class="summary__title text-light">IMAGE</div>
+              <div class="summary__text text-bold">LAMP Stack on Ubuntu 14.04</div>
+            </div>
+          </div>
+          <div class="summary__col flex--bottom">
+            <div class="summary__image">
+              <img src="images/icons/x2.svg" alt="" width="34">
+            </div>
+            <div class="summary__desc">
+              <div class="summary__title text-light">SIZE</div>
+              <h4 class="summary__text">X2</h4>
+            </div>
+          </div>
+          <div class="summary__col">
+            <div class="summary__images">
+              <img src="images/icons/dashed-clock.svg" alt="">
+              <img src="images/icons/monitoring.svg" alt="">
+              <img src="images/icons/support.svg" alt="">
+            </div>
+          </div>
+          <div class="summary__col">
+            <div class="summary__desc">
+              <div class="summary__title text-light">Servers</div>
+              <h4 class="summary__text text-right">2X</h4>
+            </div>
+          </div>
+          <div class="summary__sep"></div>
+          <div class="summary__col">
+            <div class="summary__desc">
+              <div class="summary__title text-light">TOTAL</div>
+              <h4 class="summary__text">$960 <span class="text-light">/ month</span></h4>
+            </div>
+          </div>
+          <div class="summary__col">
+            <button class="btn btn-simple px-2 mr-2" type="reset">CANCEL</button>
+            <button class="btn btn-secondary px-4" type="submit">CREATE</button>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </form>
+</div>
+
+@@include('partials/footer.html')

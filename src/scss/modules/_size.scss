@@ -1,0 +1,12 @@
+//size icon and text (x1-x5)
+.size {
+  display: inline-flex;
+  align-items: center;
+  height: 26px;
+
+  img {
+    margin-right: 5px;
+    width: 18px;
+  }
+  strong {line-height: 12px; text-transform: uppercase;}
+}

@@ -1,0 +1,42 @@
+::-moz-selection {}
+::selection {}
+
+//html { height: 100%;}
+
+//body {height: 100%;}
+
+img {
+  max-width: 100%;
+}
+
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {margin: 0 0 1em 0;}
+
+h2 {font-weight: 400;}
+
+
+a:hover, a:focus {
+  text-decoration: none; outline: none;
+  transition: color .3s ease;
+}
+
+input, button, select {outline: none !important;}
+
+p {
+  &:last-child {margin-bottom: 0;}
+}
+
+label {
+  font-weight: 500;
+  color: #6c7680;
+}
+// disable select arrow in IE
+//select::-ms-expand { display: none;}
+
+// noresize textarea's width
+textarea { width: 100%!important; }

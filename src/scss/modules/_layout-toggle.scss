@@ -1,0 +1,26 @@
+// view toggler (grid/table)
+.layout-toggle {
+  height: 32px;
+  width: 40px;
+
+  img {
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    @include grayscale;
+  }
+
+  &:first-child img {
+    transform: translate(-35%, -50%);
+  }
+  &:last-child img {
+    transform: translate(-65%, -50%);
+  }
+
+  &.is-active img,
+  &:hover img{
+    @include grayscale-disable;
+  }
+}

@@ -1,0 +1,41 @@
+// statuses with dots
+// can be extended or changed later
+
+.status {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  padding-left: 15px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    border-radius: 50%;
+    width: 7px;
+    height: 7px;
+    margin-top: -3.5px;
+    background-color: transparent;
+  }
+
+  &--active {
+    color: $brand-success;
+
+    &:before {background-color: $brand-success;}
+  }
+
+  &--onhold  {
+    color: $text-color;
+    &:before {background-color: $text-color;}
+  }
+
+  &--waiting  {
+    color:$brand-secondary ;
+    &:before {background-color: $brand-secondary;}
+  }
+}

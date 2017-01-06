@@ -1,0 +1,14 @@
+.content {
+  padding:30px $content-xpadding-xs;
+
+  @include media-breakpoint-up(md){
+    padding: 30px $content-xpadding-md;
+  }
+
+  @include media-breakpoint-up(lg) {
+    margin-left: $sidebar-width;
+  }
+  @include media-breakpoint-up(xl) {
+    padding:50px $content-xpadding-xl 74px;
+  }
+}

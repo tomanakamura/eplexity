@@ -1,0 +1,45 @@
+// Font config
+$font-config: (
+  SFUIDisplayRegular: (
+    'SFUIDisplay',
+    '../fonts/SFUIDisplay/SFUIDisplay-Regular',
+    normal,
+    400
+  ),
+  SFUIDisplayMedium: (
+    'SFUIDisplay',
+    '../fonts/SFUIDisplay/SFUIDisplay-Medium',
+    normal,
+    500
+  ),
+  SFUIDisplayBold: (
+    'SFUIDisplay',
+    '../fonts/SFUIDisplay/SFUIDisplay-Bold',
+    normal,
+    700
+  )
+ );
+
+@mixin font-face($font-family, $font-path, $font-style, $font-weight){
+  @font-face {
+    font-family: $font-family;
+    src: url('#{$font-path}.eot'); /* IE9 Compat Modes */
+    src: url('#{$font-path}.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       /* url('#{$font-path}.woff2') format('woff2'), Super Modern Browsers */
+       url('#{$font-path}.woff') format('woff'), /* Pretty Modern Browsers */
+       url('#{$font-path}.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('#{$font-path}.svg#svgFontName') format('svg'); /* Legacy iOS */
+    font-style: $font-style;
+    font-weight: $font-weight;
+  }
+}
+
+// Include font family
+@each $font, $type in $font-config {
+  $font-name: nth($type, 1);
+  $font-path: nth($type, 2);
+  $font-style: nth($type, 3);
+  $font-weight: nth($type, 4);
+  @include font-face($font-name, $font-path, $font-style, $font-weight);
+}
+

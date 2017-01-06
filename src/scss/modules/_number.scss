@@ -1,0 +1,14 @@
+.number {
+  display: inline-block;
+  vertical-align: middle;
+  width: 27px;
+  height: 27px;
+  border: 2px solid $brand-primary;
+  text-align: center;
+  line-height: 23px;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 50%;
+  color: $brand-primary;
+  flex-shrink: 0;
+}

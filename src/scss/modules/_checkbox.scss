@@ -1,0 +1,40 @@
+.checkbox {
+  font-weight: 400;
+  margin-bottom: 0;
+
+  &__input {display: none;}
+  &__icon {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #979797;
+    margin-right: 7px;
+    color: transparent;
+    transition: all .3s ease-out;
+    cursor: pointer;
+
+    &:before {
+      @extend .fi;
+      @extend .fi-check:before;
+      font-size: 8px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,-40%);
+    }
+
+    .checkbox__input:checked + & {
+      color: $brand-primary;
+      border-color: $brand-primary;
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

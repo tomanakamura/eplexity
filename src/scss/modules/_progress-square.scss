@@ -1,0 +1,35 @@
+.progress-square {
+  display: inline-block;
+  text-align: left;
+
+  &__text {
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.86px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+  }
+
+  &__percentage {
+    font-weight: 700;
+  }
+
+  &__body {
+    position: relative;
+    width: 158px;
+    height: 6px;
+    background: url('../images/progress-square.svg') no-repeat;
+  }
+
+  &__line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    width: 0;
+    height: 100%;
+    background: url('../images/progress-square-active.svg') no-repeat left top;
+    transition: width .3s ease-out;
+  }
+
+}

@@ -1,0 +1,31 @@
+// will be changed for responsive view later
+.sidebar {
+  display: none;
+
+  @include media-breakpoint-up(lg) {
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: $sidebar-width;
+    background-color: #fff;
+    box-shadow: 0 2px 30px rgba(0, 0, 0, 0.12);
+    z-index: 3;
+  }
+
+  &__header {
+    padding: 30px 20px 60px;
+    flex-shrink: 0;
+  }
+
+  &__content {
+    flex-grow:1;
+  }
+
+  &__footer {
+    flex-shrink:0;
+    border-top: 1px solid rgba(#979797,.23);
+  }
+}

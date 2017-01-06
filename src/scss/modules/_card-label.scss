@@ -1,0 +1,30 @@
+.card-label {
+  font-weight: 400;
+  &__input {
+    display: none;
+
+    &:checked + .card {
+      border: 1px solid  $brand-primary;
+      box-shadow: 0 0 12px rgba(9, 141, 255, 0.14);
+
+      .card__image { @include grayscale-disable; }
+
+      &.card--size .card__footer{
+        background-color: $brand-blue;
+      }
+    }
+  }
+
+  .card {
+    cursor: pointer;
+    &:hover  {
+      border: 1px solid  $brand-primary;
+      box-shadow: 0 0 12px rgba(9, 141, 255, 0.14);
+    }
+  }
+
+  .card__image {
+    @include grayscale;
+    transition: all .3s ease;
+  }
+}

@@ -1,0 +1,41 @@
+@font-face {
+  font-family: 'Eplexity';
+  src:  url('../fonts/eplexity.eot?ut2g7g');
+  src:  url('../fonts/eplexity.eot?ut2g7g#iefix') format('embedded-opentype'),
+    url('../fonts/eplexity.ttf?ut2g7g') format('truetype'),
+    url('../fonts/eplexity.woff?ut2g7g') format('woff'),
+    url('../fonts/eplexity.svg?ut2g7g#eplexity') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.fi, [class^="fi-"], [class*=" fi-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'Eplexity' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.fi-check:before {
+  content: "\e904";
+}
+.fi-gear:before {
+  content: "\e900";
+}
+.fi-chart:before {
+  content: "\e901";
+}
+.fi-star:before {
+  content: "\e902";
+}
+.fi-close:before {
+  content: "\e903";
+}

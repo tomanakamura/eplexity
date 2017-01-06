@@ -1,0 +1,28 @@
+@mixin button($color, $background, $border, $color-active, $background-active, $border-active) {
+  color: $color;
+  background-color: $background;
+  border-color: $border;
+
+  // &:focus,
+  // &.focus,
+  &:hover,
+  &:active,
+  &.active
+  // .open > &.dropdown-toggle {
+  {
+    color: $color-active;
+    background-color: $background-active;
+    border-color: $border-active;
+  }
+
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &.focus {
+      background-color: $background;
+          border-color: $border;
+    }
+  }
+}

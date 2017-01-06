@@ -1,0 +1,43 @@
+@@include('partials/header.html')
+
+  <div class="container-middle">
+    <!-- remove class 'hidden' to show alert;
+
+        alert customizing classes
+          alert-info - blue;
+          alert-success - green  ;
+          alert-warning - yellow  ;
+          alert-danger - red
+    -->
+    <div class="alert alert-info hidden">
+      <p>Sweet, now you can login with your new password!</p>
+      <button type="button" class="alert__close" data-dismiss="alert" aria-label="Close"><i class="fi-close" aria-hidden="true"></i></button>
+    </div>
+    <!-- main login form-->
+    <div class="box">
+      <form action="">
+        <div class="mb-2"><img src="images/logo-text.png" alt="Eplexity logo" /></div>
+        <p class="mb-3">Enter your email & password and we’ll get you signed in.</p>
+        <div class="mb-3">
+          <label for="">Email</label>
+          <input type="email" name="email" class="form-control" required>
+        </div>
+        <div class="mb-3">
+          <div class="row">
+            <div class="col-xs-6">
+              <label for="">Password</label>
+            </div>
+            <div class="col-xs-6 text-right">
+              <a href="request-password.html">Forgot password?</a>
+            </div>
+          </div>
+          <input type="password" name="password" class="form-control" required>
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-secondary px-4">Sign in</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+@@include('partials/footer.html')

@@ -1,0 +1,51 @@
+// main menu in sidebar
+.menu {
+  &__item {
+    color:$gray-darker;
+    color:$gray-dark;
+    color:$gray;
+    color:$gray-light;
+    color:$gray-lighter;  
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: $gray-base;
+    font-weight: 600;
+    letter-spacing: 2px;
+    padding: 15px 20px;
+    transition: color .3s ease-out;
+
+    &:before {
+      content:'';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background-color: $brand-primary;
+      box-shadow: 0 2px 4px #0a8dff;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .3s ease-out, visibility .3s ease-out;
+    }
+
+    &.is-active,
+    &:hover {
+      color: $brand-primary;
+
+      &:before {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  &__icon {
+    width: 20px;
+    margin-right: 15px;
+  }
+}
