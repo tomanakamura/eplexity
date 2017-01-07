@@ -1,5 +1,13 @@
 // main menu in sidebar
 .menu {
+  h5.menu-cat {
+  	color: #9b9b9b;
+  	font-size: 10.5px;
+  	margin-bottom: 0px;
+  	padding-left: 20px;
+  	text-transform: uppercase;
+  	letter-spacing: 1px;
+  }
   &__item {
     color:$gray-darker;
     color:$gray-dark;
