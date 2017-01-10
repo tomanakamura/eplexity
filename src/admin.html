@@ -17,13 +17,21 @@
     </div>
   </header>
   <div class="section__content">
-		<div class="col-xs-12 col-sm-12 nopadding mb-2">
-		  	<span class="text-left table-name">Providers</span>
-		  	<a href="#" class="btn btn-secondary px-4 pull-right">Add provider</a>
-		</div>
-      
+      	<div class="row mb-3 mt-4">
+        	<div class="col-xs-12">
+          		<!-- Nav tabs  .active class for active  section link -->
+          		<ul class="nav nav-tabs" role="tablist">
+            		<li role="presentation" class="active"><a href="#providers" data-toggle="tab">Providers</a></li>
+            		<li role="presentation"><a href="#global-marketplace"  data-toggle="tab">Global Marketplace</a></li>
+          		</ul>
+        	</div>
+      	</div>      
 		<div class="tab-content">
-			<div class="tab-pane active" id="providers">  
+			<div class="tab-pane active" id="providers">
+				<div class="col-xs-12 col-sm-12 nopadding mb-2">
+				  	<span class="text-left table-name">Providers</span>
+				  	<a href="#" class="btn btn-secondary px-4 pull-right" data-toggle="modal" data-target="#add-provider-modal">Add provider</a>
+				</div>			
 				<table class="table table-bordered" id="provider-table">
 			    	<thead>
 			        	<tr>
@@ -59,7 +67,8 @@
 							<td class="text-center">4</td>
 							<td class="text-center">99</td>
 							<td class="text-center"><img src="images/icons/gear.svg" /></td>
-			             </tr>			      	</tbody>          
+			             </tr>			      	
+			         </tbody>          
 				</table>		   	
 	     	</div>
 	     	<div class="tab-pane" id="global-marketplace">  
@@ -72,5 +81,5 @@
 </div>
 
 
-@@include('partials/add-cloud-modal.html')
+@@include('modals/add-provider-modal.html')
 @@include('partials/footer.html')

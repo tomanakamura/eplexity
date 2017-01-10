@@ -1,0 +1,69 @@
+<div class="modal fade" id="add-provider-modal" tabindex="-1" role="dialog" aria-labelledby="add-provider-modal">
+	<div class="modal-dialog" role="document">
+    	<div class="modal-content">
+     		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        		<h2 class="modal-title section__lead" id="add-provider-modal">Add Provider</h2>
+        		<div class="section__lead">
+		          	<p>Control infrastructure items in all your datacenters.</p>
+		        </div>
+      		</div>
+      		<div class="modal-body">
+								
+				<div data-step="1" class="step">
+					<div class="row">
+						<div class="col-xs-12">
+							<form name="add-provider-form" method="post">
+								<div class="form-group">
+                					<label>Name</label>
+                					<input type="text" name="provider-name" class="form-control">
+                				</div>
+								<div class="form-group">
+                					<label>Description</label>
+                					<input type="text" name="provider-description" class="form-control">
+                				</div>
+                				<h5 class="mt-2">Provider Administrator</h5>
+								<div class="form-group">
+                					<label>Name</label>
+                					<input type="text" name="provider-admin-name" class="form-control">
+                				</div>                				
+								<div class="form-group">
+									<div class="row">
+										<div class="col-xs-12 col-sm-6">
+											<label>Email</label>
+											<input type="email" name="provider-admin-email" class="form-control">
+										</div>
+										<div class="col-xs-12 col-sm-6">
+											<label>Phone</label>
+											<input type="text" name="provider-admin-phone" class="form-control">
+										</div>
+									</div>
+                				</div> 								
+                				<div class="form-group">
+                					<label>Password</label>
+                					<input type="password" name="provider-admin-password" class="form-control">
+                				</div>                 				
+                				<div class="form-group">
+                					<label>User Role</label>
+                					<select name="user-role" class="form-control">
+                						<option>Option1</option>
+                						<option>Option2</option>
+                						<option>Option3</option>
+                					</select>
+                				</div>
+								<div class="form-group">
+                					<label>CXOS Licensing</label>
+                					<input type="text" name="cxos-license" class="form-control">
+                				</div>                			
+                			</form>
+                		</div>			
+					</div>
+				</div>
+     		</div>
+     		<div class="modal-footer">
+     			<button class="btn btn-simple px-3" data-dismiss="modal">cancel</button>
+     			<button class="btn btn-secondary px-4">Add</button>
+     		</div>
+     	</div>
+     </div>
+</div>     		
