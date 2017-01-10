@@ -1,0 +1,84 @@
+<div class="modal fade" id="edit-product-modal" tabindex="-1" role="dialog" aria-labelledby="edit-product-modal">
+	<div class="modal-dialog" role="document">
+    	<div class="modal-content">
+     		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        		<h2 class="modal-title section__lead" id="edit-product-modal">Add Product</h2>
+      		</div>
+      		<div class="modal-body">
+								
+				<div data-step="1" class="step">
+					<div class="row">
+						<div class="col-xs-12">
+							<form name="add-product-form" method="post">
+								<div class="form-group">
+									<div class="row">
+										<div class="col-xs-12 col-sm-9">
+											<label>Product Name</label>
+											<input type="text" name="product-name" class="form-control">
+										</div>
+										<div class="col-xs-12 col-sm-3">
+											<label>Status</label>
+											<input checked data-toggle="toggle" data-style="android" data-onstyle="info" type="checkbox">
+										</div>
+									</div>
+                				</div>								
+                				<div class="form-group">
+                					<label>Description</label>
+                					<textarea name="product-description" class="form-control"></textarea>
+                				</div>
+								<div class="form-group">
+                					<label>Deployment Time</label>
+                					<input type="text" name="deployment-time" class="form-control">
+                				</div>
+								<div class="form-group">
+                					<label>Target Marketing</label>
+                					<select name="target-marketing" class="form-control">
+                						<option>option1</option>
+                						<option>option2</option>
+                						<option>option3</option>
+                					</select>
+                				</div>                				
+								<div class="form-group">
+									<div class="row">
+										<div class="col-xs-12 col-sm-7">
+											<label>Product Price</label>
+											<select name="price-type" class="form-control">
+												<option>option1</option>
+												<option>option1</option>
+												<option>option1</option>
+											</select>
+										</div>
+										<div class="col-xs-12 col-sm-5">
+											<label class="no-visible">Billing Cycle</label>
+											<div class="input-group">
+												<div class="input-group-btn">
+											        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">PER MONTH </button>
+											        <ul class="dropdown-menu">
+											          	<li><a href="#">PER MONTH</a></li>
+											          	<li><a href="#">PER MONTH</a></li>
+											          	<li><a href="#">PER MONTH</a></li>
+											        </ul>
+												</div>													
+												<input type="text" name="billing-cycle" class="form-control">
+											</div>
+										</div>
+									</div>
+                				</div> 								
+                				              			
+                			</form>
+                			<div class="form-group">
+                					<label>Product Image</label>
+                					<form action="/" class="dropzone"></form>
+                			</div> 
+                		</div>			
+					</div>
+				</div>
+     		</div>
+     		<div class="modal-footer">
+     			<button class="btn btn-simple px-3" data-dismiss="modal">cancel</button>
+     			<button class="btn btn-secondary px-4">upload</button>
+     		</div>
+     	</div>
+     </div>
+</div>     		
