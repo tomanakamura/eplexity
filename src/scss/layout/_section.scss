@@ -65,7 +65,16 @@
   &__tools {
     text-align: right;
   }
-
+  
+  &__icon {
+  
+  	
+  	&.icon-big {
+  		width: 35px;
+  	}
+  
+  }
+    	
 
   &__content {
 

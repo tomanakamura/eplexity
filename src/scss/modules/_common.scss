@@ -23,4 +23,75 @@
   line-height: 1;
 }
 
- 
+// Admin global marketplace catalog detail
+.nopadding {
+	padding: 0 !important;
+}
+table {
+	td, th {
+		padding: 15px !important;
+		border-left: none !important;
+		border-right: none !important;
+	}
+	td {
+		background: #fff;
+	}
+	tr.inactive td {
+		color: $gray-light;
+	}
+}
+.table-name {
+	font-size: $font-size-h4;
+}
+
+// Add Provider Clound 
+.close {
+    color: #000;
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    opacity: 0.2;
+    text-shadow: 0 1px 0 #fff;
+}
+button.close {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 0 none;
+    cursor: pointer;
+    padding: 0;
+}
+.modal-header {
+	border-bottom: none;
+} 
+.modal-footer {
+	text-align: center !important;
+}
+.video-panel {
+	border: 1px solid #ffbc01;
+	padding: 10px;
+	background-color: #fff1c9;
+	
+	a#show-video {
+		color: $brand-warning;
+		font-size: $font-size-small;
+	}
+	
+	.video-player {
+		background-color: #555;
+		height: 200px;
+		text-align: center;
+	}
+}
+/* progress bar */
+.progress {
+	border-radius: 20px !important;
+	height: 15px !important;
+}
+.a-center {
+	margin-top: 15%;
+}
+.text {
+	&-blue {
+		color: $brand-primary;
+	}
+}

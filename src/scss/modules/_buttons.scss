@@ -37,3 +37,10 @@
 
   &:after {display: none;}
 }
+
+.btn-player {
+  @include button($btn-primary-color, $gray-dark,  $gray-base, $text-color, lighten($gray-base, 25%),  lighten($gray-base, 5%));
+}
+.btn-blue {
+	@include button($btn-primary-border, lighten($btn-primary-bg, 43%),  $btn-primary-border, $btn-primary-border, lighten($btn-primary-bg, 25%),  lighten($btn-primary-bg, 5%));
+}

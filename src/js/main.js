@@ -100,9 +100,116 @@ function layoutToggleInit(table) {
   });
 }
 
+function switchButton(){
+    $('input[data-toggle="toggle"]').change(function() {
+    	
+    	if($(this).prop('checked')){
+    		$(this).parents('tr').removeClass('inactive');
+    	} else {
+    		$(this).parents('tr').addClass('inactive');
+    	}
+    	
+    	
+    });	
+}
 
+function multiStepForm(){
+	
+	// Next Action
+	$('#btn-next').on('click', function(){
+		
+		var current_step 	= $('#multistep-panel .step:visible');
+		var current_step_id = current_step.data('step');
+		var next_step_id	= parseInt(current_step_id) + 1;
+		
+		
+		
+		if($(this).hasClass('incomplete')){
+			
+			current_step.hide();
+			
+			if($('#btn-prev').hasClass('cancel-step')){
+				
+				$('#btn-prev').removeClass('cancel-step modal-close').text('back');
+				
+			}
+			
+			$('#multistep-panel .step[data-step="' + next_step_id + '"]').removeClass('hidden').fadeIn();
+			
+			if(next_step_id == $('#multistep-panel .step').size()){
+				
+				$(this).removeClass('incomplete').text('finish').addClass('modal-close');
+				
+			}
+		
+		} else {
+			
+			$('.modal').modal('hide');
+			$('#multistep-panel .step').hide();
+			$('#multistep-panel .step[data-step="1"]').show();
+			
+		}
+		
+	});
+	
+	// Prev Action
+	$('#btn-prev').on('click', function(){
+		
+		var current_step 	= $('#multistep-panel .step:visible');
+		var current_step_id = current_step.data('step');
+		var prev_step_id	= parseInt(current_step_id) - 1;
+		
+		
+		
+		if(!$(this).hasClass('cancel-step')){
+			
+			current_step.hide();
+			
+			if(!$('#btn-next').hasClass('incomplete')){
+				
+				$('#btn-next').addClass('incomplete').removeClass('modal-close').text('next');
+				
+			}
+			
+			$('#multistep-panel .step[data-step="' + prev_step_id + '"]').removeClass('hidden').fadeIn();
+			
+			if(prev_step_id == 1){
+				
+				$(this).addClass('cancel-step modal-close').text('cancel');
+				
+			}
+		
+		} else {
+			
+			$('.modal').modal('hide');
+			$('#multistep-panel .step').hide();
+			$('#multistep-panel .step[data-step="1"]').show();
+			
+		}		
+		
+	});
+	
+	
+}
 
 $(document).ready(function() {
-  dataTableInit();
-  layoutToggleInit('#servers');
+	dataTableInit();
+	
+	layoutToggleInit('#servers');
+	
+	switchButton();
+	
+	multiStepForm();
+	
+	// Video panel toggle
+	$('#show-video').on('click', function(){
+		
+		if($('.video-player').css('display') == 'none'){
+			$('.video-player').removeClass('hidden');
+		} else {
+			$('.video-player').addClass('hidden');
+		}
+		
+	});
+	
 });
