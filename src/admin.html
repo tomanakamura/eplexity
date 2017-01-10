@@ -1,0 +1,76 @@
+@@include('partials/header.html')
+
+@@include('partials/admin-sidebar.html')
+
+<div class="content">
+  <header class="section__header">
+    <div class="row">
+      <div class="col-xs-12 col-xl-6">
+        <div class="section__top">
+          <div class="section__icon icon-big"><img src="images/icons/admin-setting.svg" alt=""></div>
+          <h2 class="section__heading">Administration</h2>
+        </div>
+        <div class="section__lead">
+          <p>Infrastructure means anything running on your Cloud Platforms.</p>
+        </div>        
+      </div>     
+    </div>
+  </header>
+  <div class="section__content">
+		<div class="col-xs-12 col-sm-12 nopadding mb-2">
+		  	<span class="text-left table-name">Providers</span>
+		  	<a href="#" class="btn btn-secondary px-4 pull-right">Add provider</a>
+		</div>
+      
+		<div class="tab-content">
+			<div class="tab-pane active" id="providers">  
+				<table class="table table-bordered" id="provider-table">
+			    	<thead>
+			        	<tr>
+			            	<th class="text-left">Provider Name</th>
+			                <th class="text-left">User Role</th>
+			                <th class="text-center">Clouds</th>
+			                <th class="text-center">Servers</th>
+			                <th class="text-center">#License</th>
+			                <th class="text-center">Actions</th>
+			             </tr>
+			         </thead>
+			         <tbody>
+			             <tr>
+			             	<td class="text-left"><strong>#1 Provider Name</strong></td>
+							<td class="text-left"><small>Provider Adminstrator</small></td>
+							<td class="text-center">4</td>  
+							<td class="text-center">4</td>
+							<td class="text-center">99</td>
+							<td class="text-center"><img src="images/icons/gear.svg" /></td>
+			             </tr>
+			             <tr>
+			             	<td class="text-left"><strong>#1 Provider Name</strong></td>
+							<td class="text-left"><small>Provider Adminstrator</small></td>
+							<td class="text-center">4</td>  
+							<td class="text-center">4</td>
+							<td class="text-center">99</td>
+							<td class="text-center"><img src="images/icons/gear.svg" /></td>
+			             </tr>
+			             <tr>
+			             	<td class="text-left"><strong>#1 Provider Name</strong></td>
+							<td class="text-left"><small>Provider Adminstrator</small></td>
+							<td class="text-center">4</td>  
+							<td class="text-center">4</td>
+							<td class="text-center">99</td>
+							<td class="text-center"><img src="images/icons/gear.svg" /></td>
+			             </tr>			      	</tbody>          
+				</table>		   	
+	     	</div>
+	     	<div class="tab-pane" id="global-marketplace">  
+	     	
+	     	</div>	
+		</div>         
+
+
+  </div>
+</div>
+
+
+@@include('partials/add-cloud-modal.html')
+@@include('partials/footer.html')

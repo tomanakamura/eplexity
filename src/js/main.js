@@ -131,6 +131,7 @@ function multiStepForm(){
 			if($('#btn-prev').hasClass('cancel-step')){
 				
 				$('#btn-prev').removeClass('cancel-step modal-close').text('back');
+				$('.video-panel').removeClass('hidden');
 				
 			}
 			
@@ -158,9 +159,7 @@ function multiStepForm(){
 		var current_step 	= $('#multistep-panel .step:visible');
 		var current_step_id = current_step.data('step');
 		var prev_step_id	= parseInt(current_step_id) - 1;
-		
-		
-		
+				
 		if(!$(this).hasClass('cancel-step')){
 			
 			current_step.hide();
@@ -176,6 +175,7 @@ function multiStepForm(){
 			if(prev_step_id == 1){
 				
 				$(this).addClass('cancel-step modal-close').text('cancel');
+				$('.video-panel').addClass('hidden');
 				
 			}
 		
