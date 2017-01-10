@@ -19,7 +19,7 @@
   <div class="section__content">
 	  <div class="col-xs-12 col-sm-12 nopadding mb-2">
 	  	<span class="text-left table-name">Product name</span>
-	  	<a href="#" class="btn btn-secondary px-4 pull-right">Add product</a>
+	  	<a href="#" class="btn btn-secondary px-4 pull-right" data-toggle="modal" data-target="#add-product-modal">Add product</a>
 	  </div>
       <table class="table table-bordered" id="product-table">
       
@@ -78,4 +78,5 @@
   </div>
 </div>
 
+@@include('modals/add-product-modal.html')
 @@include('partials/footer.html')

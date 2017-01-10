@@ -14,6 +14,9 @@
 @import "plugins/bootstrap";
 @import "plugins/datatables-bootstrap";
 @import "plugins/bootstrap-toggle.min";
+@import "plugins/select2.min";
+@import "plugins/dropzone";
+@import "plugins/basic";
 
 // @import "base/";
 @import "base/global";
@@ -47,6 +50,7 @@
 @import "modules/order-list";
 @import "modules/progress-square";
 @import "modules/summary";
+@import "modules/form-elements";
 
 // bootstrap rewrite
 @import "modules/buttons";

@@ -90,8 +90,6 @@ button.close {
 .a-center {
 	margin-top: 15%;
 }
-.text {
-	&-blue {
-		color: $brand-primary;
-	}
+.no-visible {
+	visibility: hidden !important;
 }

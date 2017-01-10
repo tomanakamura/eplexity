@@ -13,3 +13,9 @@
     .text-#{$breakpoint}-center { text-align: center !important; }
   }
 }
+
+.text {
+	&-blue {
+		color: $brand-primary;
+	}
+}

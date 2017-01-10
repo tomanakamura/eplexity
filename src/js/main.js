@@ -100,6 +100,7 @@ function layoutToggleInit(table) {
   });
 }
 
+// Switch Button
 function switchButton(){
     $('input[data-toggle="toggle"]').change(function() {
     	
@@ -113,6 +114,7 @@ function switchButton(){
     });	
 }
 
+//Multi Step Form
 function multiStepForm(){
 	
 	// Next Action
@@ -192,6 +194,15 @@ function multiStepForm(){
 	
 }
 
+// Custom Selectbox
+function customSelectInit(){
+	
+	$('select').select2({
+		minimumResultsForSearch: Infinity
+	});
+	
+}
+
 $(document).ready(function() {
 	dataTableInit();
 	
@@ -200,6 +211,8 @@ $(document).ready(function() {
 	switchButton();
 	
 	multiStepForm();
+	
+	customSelectInit();
 	
 	// Video panel toggle
 	$('#show-video').on('click', function(){
