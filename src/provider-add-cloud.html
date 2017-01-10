@@ -1,0 +1,95 @@
+@@include('partials/header.html')
+
+@@include('partials/admin-sidebar.html')
+
+<div class="content">
+  <header class="section__header">
+    <div class="row">
+      <div class="col-xs-12 col-xl-6">
+        <div class="section__top">
+          <div class="section__icon icon-big"><img src="images/icons/arrow-in-circle.svg" alt=""></div>
+          <h2 class="section__heading">Provider A</h2>
+        </div>
+      </div>
+      <div class="col-xs-12 col-xl-6">
+        <div class="section__tools">
+		  <input checked data-toggle="toggle" data-style="android" data-onstyle="success" data-offstyle="default" type="checkbox">
+          <!-- js-dropdown-change class in dropdown parent for setting the clicked dropdown item data-value in input and html in button  -->
+          <div class="btn-group ml-1 js-dropdown-change">
+            <button type="button" class="btn btn-simple  dropdown-toggle" data-toggle="dropdown">
+              <span class="status">Configure</span>
+            </button>
+            <!-- js-server-dt-filter on change will be filtered table-->
+            <input type="hidden" value="" class="js-server-dt-filter">
+            <ul class="dropdown-menu">
+              <li><a href="#" data-value=""><span class="status">ALL</span></a></li>
+              <li><a href="#" data-value="ACTIVE"><span class="status status--active">default</span></a></li>
+              <li><a href="#" data-value="ON HOLD"><span class="status status--onhold">default</span></a></li>
+              <li><a href="#" data-value="WAITING"><span class="status status--waiting">default</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>      
+    </div>
+  </header>
+  <div class="section__content">
+	  <div class="col-xs-12 col-sm-12 mb-2 nopadding">
+	  	<span class="text-left table-name">Clouds</span>
+	  	<a href="#" class="btn btn-secondary px-4 pull-right" data-toggle="modal" data-target="#add-cloud-modal">Add Cloud</a>
+	  </div>	
+      <div class="row mb-3">
+        <div class="col-xs-12">
+          <!-- Nav tabs  .active class for active  section link -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#clouds" data-toggle="tab">Clouds</a></li>
+            <li role="presentation"><a href="#image-library"  data-toggle="tab">Image Library</a></li>
+            <li role="presentation"><a href="#organizations" data-toggle="tab">Organizations</a></li>
+            <li role="presentation"><a href="#provider-plans" data-toggle="tab">Provider Plans</a></li>
+          </ul>
+        </div>
+      </div>
+      
+		<div class="tab-content">
+			<div class="tab-pane active" id="images">  
+			      <table class="table table-bordered" id="product-table">
+			      
+			         <thead>
+			              <tr>
+			                  <th class="text-left">Cloud name</th>
+			                  <th class="text-left">VM</th>
+			                  <th>Region</th>
+			                  <th class="text-center">Actions</th>
+			              </tr>
+			          </thead>
+			          <tbody>
+			              <tr>
+			              	<td class="text-left"><strong>AWS DC Agent - US - East1</strong></td>
+							<td class="text-left"><strong>vm</strong>ware</td>
+							<td class="text-left">us-east-1</td>  
+							<td class="text-center"><img src="images/icons/gear.svg" /></td>
+			              </tr>
+			              <tr>
+			              	<td class="text-left"><strong>AWS DC Agent - US - East1</strong></td>
+							<td class="text-left"><strong>vm</strong>ware</td>
+							<td class="text-left">us-east-1</td>  
+							<td class="text-center"><img src="images/icons/gear.svg" /></td>
+			              </tr>
+			              <tr>
+			              	<td class="text-left"><strong>AWS DC Agent - US - East1</strong></td>
+							<td class="text-left"><strong>vm</strong>ware</td>
+							<td class="text-left">us-east-1</td>  
+							<td class="text-center"><img src="images/icons/gear.svg" /></td>
+			              </tr>                                                      
+			          </tbody>          
+			      
+			      </table>		   	
+      		</div>
+		</div>         
+
+
+  </div>
+</div>
+
+
+@@include('partials/add-cloud-modal.html')
+@@include('partials/footer.html')
