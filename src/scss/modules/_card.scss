@@ -62,7 +62,68 @@
     .card__text {margin-bottom: 15px;}
   }
 
+  // card plan
+  &-plan {
+    display: flex;
+    flex-direction: column; 
+    text-align: left;
+  	
+  	.card-header {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid rgba(#dedede, .5);
+      padding: 15px 20px;
+      height: 70px;
+      
+      h5 {
+      	color: $gray-base;
+      	margin-bottom: 0;
+      	margin-right: 20px;
+      }
+      h4 {
+      	margin-bottom: 0;
+      	margin-right: 30px;
+      }
+      .card__price {
+      	margin: 0;
+      	font-size: 12px;
+      	color: $gray-base;
+      	
+      	strong {
+      	  font-size: 20px;
+      	  color: $gray;
+      	}
+      }
+  	}
+  	.card-content {
+      flex-grow: 1;
+      padding: 15px 20px;
 
+      @include media-breakpoint-down(xs) {
+        display: flex;
+        align-items: center;
+        padding: 15px 0;
+      }  	
+    }
+    
+    .card-percent {
+    	font-size: 17px;
+    }
+    .card-progress-title {
+    	font-size: 13px;
+    	color: $gray-base;
+    	text-transform: uppercase;
+    }
+    .progress {
+    	height: 10px !important;
+    }   
+    .help-link {
+    	line-height: 100px;
+    }
+  }
+  
+  	
   // card size
   &--size {
     display: flex;

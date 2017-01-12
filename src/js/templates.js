@@ -1,17 +1,18 @@
 // templates for servers datatable
 var templates = {
-    vm  : '<div class="card__righttop"><img src="images/%src%" alt="" /></div>',
-    size: '<span class="size"><img src="images/icons/%size%.svg" alt="" /> <strong>%size%</strong></span>',
-    status: '<div class="card__lefttop"><span class="status status--%status%">%statusText%</span></div>',
-    datacenter: '<span class="hidden-table">Datacenter:</span> <span class="strong-grid">%dc%</span>',
-    actions: '<div class="btn-group">\
-          <span class="btn btn-action dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>\
-          <ul class="dropdown-menu dropdown-menu--secondary">\
-            <li><a href="#">RENAME</a></li>\
-            <li><a href="#">EDIT</a></li>\
-            <li><a href="#">REFRESH</a></li>\
-            <li><a href="#">REMOVE</a></li>\
-          </ul></div>',
+    vm  			: '<div class="card__righttop"><img src="images/%src%" alt="" /></div>',
+    size			: '<span class="size"><img src="images/icons/%size%.svg" alt="" /> <strong>%size%</strong></span>',
+    status			: '<div class="card__lefttop"><span class="status status--%status%">%statusText%</span></div>',
+    datacenter		: '<span class="hidden-table">Datacenter:</span> <span class="strong-grid">%dc%</span>',
+    switchstatus   	: '<input data-toggle="toggle" data-style="android" data-onstyle="info" type="checkbox" %status%>',	
+    actions			: '<div class="btn-group">\
+			          <span class="btn btn-action dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></span>\
+			          <ul class="dropdown-menu dropdown-menu--secondary">\
+			            <li><a href="#">RENAME</a></li>\
+			            <li><a href="#">EDIT</a></li>\
+			            <li><a href="#">REFRESH</a></li>\
+			            <li><a href="#">REMOVE</a></li>\
+			          </ul></div>',
     'serverName' : '<div class="row row--flex row--flex-middle mb-2 js-servername-row">\
               <div class="col-xs-11 col-md-6 col-lg-6 col-xl-3">\
                 <label>Server <span>%num%</span> Name</label>\

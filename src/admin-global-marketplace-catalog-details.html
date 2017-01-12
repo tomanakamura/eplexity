@@ -17,64 +17,13 @@
     </div>
   </header>
   <div class="section__content">
-	  <div class="col-xs-12 col-sm-12 nopadding mb-2">
-	  	<span class="text-left table-name">Product name</span>
-	  	<a href="#" class="btn btn-secondary px-4 pull-right" data-toggle="modal" data-target="#add-product-modal">Add product</a>
+  	  <div class="row">	
+		  <div class="col-xs-12 col-sm-12">
+		  	  <span class="text-left table-name">Product name</span>
+		  	  <a href="#" class="btn btn-secondary px-4 pull-right" data-toggle="modal" data-target="#add-product-modal">Add product</a>
+		  </div>
 	  </div>
-      <table class="table table-bordered" id="product-table">
-      
-         <thead>
-              <tr>
-                  <th class="text-left">Product name</th>
-                  <th class="text-left">Description</th>
-                  <th>Depl.Time</th>
-                  <th>Target Marketing</th>
-                  <th class="text-center">Product Price</th>
-                  <th class="text-center">Status</th>
-                  <th class="text-center">Actions</th>
-              </tr>
-          </thead>
-          <tbody>
-              <tr>
-              	<td class="text-left"><strong>CheckPoint Firewall</strong></td>
-				<td class="text-left">CheckpointFW - IPS and many other...</td>
-				<td class="text-center">30 Minutes</td>  
-				<td class="text-center">Networking</td>
-				<td class="text-center"><strong>$50</strong>/Month</td>
-				<td class="text-center"><input checked data-toggle="toggle" data-style="android" data-onstyle="info" type="checkbox"></td>
-				<td class="text-center"><img src="images/icons/gear.svg" /></td>
-              </tr>
-              <tr>
-              	<td class="text-left"><strong>CheckPoint Firewall</strong></td>
-				<td class="text-left">CheckpointFW - IPS and many other...</td>
-				<td class="text-center">30 Minutes</td>  
-				<td class="text-center">Networking</td>
-				<td class="text-center"><strong>$50</strong>/Month</td>
-				<td class="text-center"><input checked data-toggle="toggle" data-style="android" data-onstyle="info" type="checkbox"></td>
-				<td class="text-center"><img src="images/icons/gear.svg" /></td>
-              </tr>
-              <tr>
-              	<td class="text-left"><strong>CheckPoint Firewall</strong></td>
-				<td class="text-left">CheckpointFW - IPS and many other...</td>
-				<td class="text-center">30 Minutes</td>  
-				<td class="text-center">Networking</td>
-				<td class="text-center"><strong>$50</strong>/Month</td>
-				<td class="text-center"><input checked data-toggle="toggle" data-style="android" data-onstyle="info" type="checkbox"></td>
-				<td class="text-center"><img src="images/icons/gear.svg" /></td>
-              </tr>
-              <tr class="inactive">
-              	<td class="text-left"><strong>CheckPoint Firewall</strong></td>
-				<td class="text-left">CheckpointFW - IPS and many other...</td>
-				<td class="text-center">30 Minutes</td>  
-				<td class="text-center">Networking</td>
-				<td class="text-center"><strong>$50</strong>/Month</td>
-				<td class="text-center"><input data-toggle="toggle" data-style="android" data-onstyle="info" type="checkbox"></td>
-				<td class="text-center"><img src="images/icons/gear.svg" /></td>
-              </tr>                                          
-          </tbody>          
-      
-      </table>
-
+	  <table class="dataTable--table" id="table-products"></table>
   </div>
 </div>
 
