@@ -132,6 +132,42 @@
       padding: 15px;
       border-bottom: 1px solid #dedede;
       vertical-align: middle;
+      
+      .progress {
+      	height: 10px !important;
+      	margin-bottom: 0 !important;
+      	margin-top: 4px;
+      }
+      a.view-all {
+      	font-size: 15px;
+      	margin-left: 20px;
+      	font-weight: 500;
+      	position: relative;
+      	transition: all .3s ease;
+      	
+      	&:after {
+		    background-image: url("../images/icons/arrow-right.png");
+		    background-repeat: no-repeat;
+		    background-size: contain;
+		    bottom: 0;
+		    content: "";
+		    height: 13px;
+		    left: calc(100%);
+		    margin: auto;
+		    position: absolute;
+		    top: 0;
+		    width: 13px;  
+		    opacity: 0; 
+		    transition: all .3s ease;   	
+		}
+      	&:hover {
+      		text-decoration: none;
+      		&:after {
+				opacity: 1;
+				left: calc(100% + 10px);
+      		}
+      	}
+      }
     }
 
     .hidden-table {display: none !important;}
@@ -140,7 +176,7 @@
 
     h3 {
       color: inherit;
-      font-size: 13px;
+      font-size: 15px;
       font-weight: bold;
       margin-bottom: 0;
     }

@@ -62,6 +62,31 @@
     .card__text {margin-bottom: 15px;}
   }
 
+  // card marketplace
+  &-marketplace {
+    display: flex;
+    flex-direction: column; 
+    text-align: left;  
+    
+  	.card-header {
+		text-align: center;
+		border-bottom: 1px solid rgba(#dedede, .5);
+		padding: 15px 20px;
+		height: 100px;
+	    
+	    img {
+	    	max-width: 100%;
+	    	width: auto;
+	    	height: 100%;
+	    } 
+     }
+      
+  	.card-content {
+	      flex-grow: 1;
+	      padding: 15px 20px;
+     }   
+  }	
+	
   // card plan
   &-plan {
     display: flex;

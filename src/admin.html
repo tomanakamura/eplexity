@@ -27,52 +27,26 @@
         	</div>
       	</div>      
 		<div class="tab-content">
+		
+			 
 			<div class="tab-pane active" id="providers">
-				<div class="col-xs-12 col-sm-12 nopadding mb-2">
-				  	<span class="text-left table-name">Providers</span>
-				  	<a href="#" class="btn btn-secondary px-4 pull-right" data-toggle="modal" data-target="#add-provider-modal">Add provider</a>
-				</div>			
-				<table class="table table-bordered" id="provider-table">
-			    	<thead>
-			        	<tr>
-			            	<th class="text-left">Provider Name</th>
-			                <th class="text-left">User Role</th>
-			                <th class="text-center">Clouds</th>
-			                <th class="text-center">Servers</th>
-			                <th class="text-center">#License</th>
-			                <th class="text-center">Actions</th>
-			             </tr>
-			         </thead>
-			         <tbody>
-			             <tr>
-			             	<td class="text-left"><strong>#1 Provider Name</strong></td>
-							<td class="text-left"><small>Provider Adminstrator</small></td>
-							<td class="text-center">4</td>  
-							<td class="text-center">4</td>
-							<td class="text-center">99</td>
-							<td class="text-center"><img src="images/icons/gear.svg" /></td>
-			             </tr>
-			             <tr>
-			             	<td class="text-left"><strong>#1 Provider Name</strong></td>
-							<td class="text-left"><small>Provider Adminstrator</small></td>
-							<td class="text-center">4</td>  
-							<td class="text-center">4</td>
-							<td class="text-center">99</td>
-							<td class="text-center"><img src="images/icons/gear.svg" /></td>
-			             </tr>
-			             <tr>
-			             	<td class="text-left"><strong>#1 Provider Name</strong></td>
-							<td class="text-left"><small>Provider Adminstrator</small></td>
-							<td class="text-center">4</td>  
-							<td class="text-center">4</td>
-							<td class="text-center">99</td>
-							<td class="text-center"><img src="images/icons/gear.svg" /></td>
-			             </tr>			      	
-			         </tbody>          
-				</table>		   	
+				<div class="row">
+					<div class="col-xs-12 col-sm-12 mb-2">
+					  	<span class="text-left table-name">Providers</span>
+					  	<a href="#" class="btn btn-secondary px-4 pull-right" data-toggle="modal" data-target="#add-provider-modal">Add provider</a>
+					</div>	
+				</div>
+				<table class="dataTable--table" id="table-providers"></table>   	
 	     	</div>
-	     	<div class="tab-pane" id="global-marketplace">  
 	     	
+	     	<div class="tab-pane" id="global-marketplace"> 
+	     		<div class="row"> 
+					<div class="col-xs-12 col-sm-12 mb-2">
+					  	<span class="text-left table-name">Marketplace Catalogs</span>
+					  	<a href="#" class="btn btn-secondary px-4 pull-right">Add Marketplace</a>
+					</div>	
+				</div>
+				<table class="dataTable--table" id="table-marketplaces"></table> 	     	
 	     	</div>	
 		</div>         
 
