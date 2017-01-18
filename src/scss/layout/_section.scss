@@ -22,6 +22,10 @@
         right: -$content-xpadding-xl;
       }
     }
+    
+    &.no-border:after {
+    	border: none;
+    }
 
      &.is-fixed {
       .section__heading {font-size: 20px;}

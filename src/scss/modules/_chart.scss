@@ -1,0 +1,44 @@
+#chart-monitor {
+	padding: 20px;
+	
+	ul.chart-period {
+		li {
+			a {
+				color: $gray-base;
+				font-weight: 500;
+			}	
+			&.active {
+				a {
+					color: $brand-primary;
+				}
+			}
+		}
+	}
+	
+	ul.chart-point {
+		position: relative;
+		li {
+			position: relative;
+			padding-right: 20px;		
+		}
+	}
+}
+
+.pie-chart {
+	width: 130px;
+	height: 130px;
+	display: block;
+	position: relative;
+
+	.info {
+	    bottom: 0;
+	    height: 40px;
+	    left: 0;
+	    margin: auto;
+	    position: absolute;
+	    right: 0;
+	    text-align: center;
+	    top: 0;
+	    width: 100%;	
+    }
+}

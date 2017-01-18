@@ -1,11 +1,14 @@
 .flex {
   display: flex;
 
-  &--middle {
+  &-middle {
     align-items: center;
+    justify-content: center;
   }
-
-  &--bottom {
+  &-justify {
+  	justify-content: space-between;
+  }	
+  &-bottom {
     align-items: flex-end;
   }
 }

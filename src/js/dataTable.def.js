@@ -549,6 +549,183 @@ function dataTableInit() {
 	  	    });	
   	  }
   } );        
+ 
+  ///////////////////////////////////////////////////////////////////
+  ///////  					Tickets Table					/////
+  ///////////////////////////////////////////////////////////////////
+  
+  // data for tickets table
+  var ticket_dataSet = [
+      [ "1234", "Scheduled Maintenance on 24/12/2016", "That's great, I was hoping it wouldn't happen right when it did happen, but now...", "active" ],
+      [ "1234", "Scheduled Maintenance on 24/12/2016", "That's great, I was hoping it wouldn't happen right when it did happen, but now...", "active" ],
+      [ "1234", "Scheduled Maintenance on 24/12/2016", "That's great, I was hoping it wouldn't happen right when it did happen, but now...", "active" ],
+      [ "1234", "Scheduled Maintenance on 24/12/2016", "That's great, I was hoping it wouldn't happen right when it did happen, but now...", "active" ],
+      [ "1234", "Scheduled Maintenance on 24/12/2016", "That's great, I was hoping it wouldn't happen right when it did happen, but now...", "active" ],
+      [ "1234", "Scheduled Maintenance on 24/12/2016", "That's great, I was hoping it wouldn't happen right when it did happen, but now...", "active" ],
+      [ "1234", "Scheduled Maintenance on 24/12/2016", "That's great, I was hoping it wouldn't happen right when it did happen, but now...", "active" ],
+      [ "1234", "Scheduled Maintenance on 24/12/2016", "That's great, I was hoping it wouldn't happen right when it did happen, but now...", "active" ],
+      [ "1234", "Scheduled Maintenance on 24/12/2016", "That's great, I was hoping it wouldn't happen right when it did happen, but now...", "active" ],
+      [ "1234", "Scheduled Maintenance on 24/12/2016", "That's great, I was hoping it wouldn't happen right when it did happen, but now...", "active" ],
+      [ "1234", "Scheduled Maintenance on 24/12/2016", "That's great, I was hoping it wouldn't happen right when it did happen, but now...", "active" ],
+      [ "1234", "Scheduled Maintenance on 24/12/2016", "That's great, I was hoping it wouldn't happen right when it did happen, but now...", "onhold" ]
+   ];  
+  
+  var table_marketplace = $('#table-tickets').DataTable( {
+      data: ticket_dataSet,
+      autoWidth: false,
+      pageLength: 5,
+      searching: false,
+      dom: '<"dataTables_top"<"row"<"col-sm-6"><"col-sm-6"f>>><"dataTables_content nowrap" t><"dataTables_bottom" p>',
+      columnDefs: [
+        {
+          targets: 0,
+          createdCell: function (td, cellData, rowData, row, col) {
+            $(td).html('<span>' + cellData + '</span>');
+          }
+        },
+        {
+          targets: 1,
+          createdCell: function (td, cellData, rowData, row, col) {
+        	  $(td).html('<h3>'+cellData+'</h3>');
+          }
+        },
+        {
+            targets: 2,
+            createdCell: function (td, cellData, rowData, row, col) {
+           	 	$(td).html('<span>' + cellData + '</span>');
+            }
+         },        
+         {
+        	 targets: 3,
+    	 	 createdCell: function (td, cellData, rowData, row, col) {
+	            if (cellData === 'onhold') {
+	                statusText = 'ON HOLD';
+	                $(td).closest('tr').addClass('card--onhold')
+	              } else {
+	                statusText = cellData;
+	              }
+
+	              $(td).html(templates.make('status', {status : cellData, statusText : statusText}));
+    	 	 }
+          }
+      ],
+      // settings for column titles and custom classes
+      columns: [
+          { title: "ID"},
+          { className: "text-left", title: "Title" },
+          { className: "text-left", title: "Description" },
+          { className: "text-center", title: "Status" },
+      ]
+  } );  
+  
+  ///////////////////////////////////////////////////////////////////
+  ///////  					History Table						/////
+  ///////////////////////////////////////////////////////////////////
+  
+  // data for tickets table
+  var history_dataSet = [
+      [ "Power off", "jc@eplexity.com", "2 minutes ago", "15 seconds" ],
+      [ "Power off", "jc@eplexity.com", "2 minutes ago", "15 seconds" ],
+      [ "Power off", "jc@eplexity.com", "2 minutes ago", "15 seconds" ],
+      [ "Power off", "jc@eplexity.com", "2 minutes ago", "15 seconds" ],
+      [ "Power off", "jc@eplexity.com", "2 minutes ago", "15 seconds" ],
+      [ "Power off", "jc@eplexity.com", "2 minutes ago", "15 seconds" ],
+      [ "Power off", "jc@eplexity.com", "2 minutes ago", "15 seconds" ],
+      [ "Power off", "jc@eplexity.com", "2 minutes ago", "15 seconds" ],
+      [ "Power off", "jc@eplexity.com", "2 minutes ago", "15 seconds" ],
+      [ "Power off", "jc@eplexity.com", "2 minutes ago", "15 seconds" ],
+      [ "Power off", "jc@eplexity.com", "2 minutes ago", "15 seconds" ],
+      [ "Power off", "jc@eplexity.com", "2 minutes ago", "15 seconds" ],
+      [ "Power off", "jc@eplexity.com", "2 minutes ago", "15 seconds" ],
+      [ "Power off", "jc@eplexity.com", "2 minutes ago", "15 seconds" ]
+    ];  
+  
+  var history_marketplace = $('#table-histories').DataTable( {
+      data: history_dataSet,
+      autoWidth: false,
+      pageLength: 5,
+      searching: false,
+      dom: '<"dataTables_top"<"row"<"col-sm-6"><"col-sm-6"f>>><"dataTables_content nowrap" t><"dataTables_bottom" p>',
+      columnDefs: [
+        {
+          targets: 0,
+          createdCell: function (td, cellData, rowData, row, col) {
+            $(td).html('<h3>'+cellData+'</h3>');
+          }
+        },
+        {
+          targets: 1,
+          createdCell: function (td, cellData, rowData, row, col) {
+        	  $(td).html('<span>' + cellData + '</span>');
+          }
+        },
+        {
+            targets: 2,
+            createdCell: function (td, cellData, rowData, row, col) {
+           	 	$(td).html('<span>' + cellData + '</span>');
+            }
+         },        
+         {
+        	 targets: 3,
+    	 	 createdCell: function (td, cellData, rowData, row, col) {
+	            $(td).html('<span>' + cellData + '</span>');
+    	 	 }
+          }
+      ],
+      // settings for column titles and custom classes
+      columns: [
+          { title: "History", width: '45%'},
+          { className: "text-left", title: "User" },
+          { className: "text-left", title: "Initated" },
+          { className: "text-left", title: "Execution time" },
+      ]
+  }); 
+  
+  ///////////////////////////////////////////////////////////////////
+  ///////  					Backup Table						/////
+  ///////////////////////////////////////////////////////////////////
+  
+  // data for backup table
+  var backup_dataSet = [
+      [ "Aug 14 2015", "109GiB", "" ],
+      [ "Aug 14 2015", "109GiB", "" ],
+      [ "Aug 14 2015", "109GiB", "" ]
+    ];  
+  
+  var backup_marketplace = $('#table-backups').DataTable( {
+      data: backup_dataSet,
+      autoWidth: false,
+      pageLength: 5,
+      searching: false,
+      dom: '<"dataTables_top"<"row"<"col-sm-6"><"col-sm-6"f>>><"dataTables_content nowrap" t><"dataTables_bottom" p>',
+      columnDefs: [
+        {
+          targets: 0,
+          createdCell: function (td, cellData, rowData, row, col) {
+            $(td).html('<img src="images/icons/folder.svg" width="20px">&nbsp;&nbsp;<strong>'+cellData+'</strong>');
+          }
+        },
+        {
+          targets: 1,
+          createdCell: function (td, cellData, rowData, row, col) {
+        	  $(td).html('<span class="text-right-table">' + cellData + '</span>');
+          }
+        },      
+         {
+        	 targets: 2,
+    	 	 createdCell: function (td, cellData, rowData, row, col) {
+    	 		 $(td).html(templates.make('actions'));
+    	 	 }
+          }
+      ],
+      // settings for column titles and custom classes
+      columns: [
+          { title: "Name", width: '80%'},
+          { className: "text-right-table", title: "Size", width: '10%' },
+          { className: "text-center-table", title: "Actions", width: '10%' },
+      ]
+  });            
+  
   
 };
 

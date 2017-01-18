@@ -114,8 +114,13 @@ function multiStepForm(){
 // Custom Selectbox
 function customSelectInit(){
 	
-	$('select').select2({
-		minimumResultsForSearch: Infinity
+	$('select').each(function(){
+		var custom_class = $(this).data('select-style');
+		
+		$(this).select2({
+			minimumResultsForSearch: Infinity,
+			containerCssClass: custom_class
+		});
 	});
 	
 }
@@ -132,7 +137,7 @@ function videoPanelToggle(){
 			$('.video-player').addClass('hidden');
 		}
 		
-	});	
+	});
 }
 
 // Dropzone Init
@@ -150,6 +155,18 @@ function dropzoneInit(){
 	
 }
 
+// Chart Init
+function chartInit(){
+	
+	$('.pie-chart').easyPieChart({
+        barColor: '#0a8dff',
+		scaleColor: false,
+		lineWidth: 13,
+		lineCap: 'square'    
+	});
+	
+}
+
 $(document).ready(function() {
 	
 	layoutToggleInit('#table-servers');
@@ -163,5 +180,7 @@ $(document).ready(function() {
 	videoPanelToggle();
 	
 	dropzoneInit();
+	
+	chartInit();
 	
 });

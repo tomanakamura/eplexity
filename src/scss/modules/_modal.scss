@@ -18,6 +18,37 @@
 	.modal-header {
 		border-bottom: none;
 	} 
+	
+	.modal-body {
+		.modal-spec-title {
+			border: 1px solid #f8f8f8;
+			background-color: #fdfdfd;
+			padding: 15px;
+			h4 {
+				font-size: 15px;
+				color: $gray-base;
+				margin: 0;
+			}
+		}
+		.modal-spec-info {
+			margin-top: 10px;
+			h4 {
+				font-size: 15px;
+				color: $gray-base;
+				margin: 0;
+			}
+			
+			.nic-type, .storage {
+				padding: 10px 0;
+				border-bottom: 1px solid $light;
+			}
+			.add-nic, .add-storage {
+				font-weight: 500;
+				display: block;
+			}
+		}
+	}
+	
 	.modal-footer {
 		text-align: center !important;
 	}
@@ -25,25 +56,25 @@
 		display: block;
 		width: 85px !important;
 	}
-}
-.video-panel {
-	border: 1px solid #ffbc01;
-	padding: 10px;
-	background-color: #fff1c9;
-	
-	a#show-video {
-		color: $brand-warning;
-		font-size: $font-size-small;
+	.video-panel {
+		border: 1px solid #ffbc01;
+		padding: 10px;
+		background-color: #fff1c9;
+		
+		a#show-video {
+			color: $brand-warning;
+			font-size: $font-size-small;
+		}
+		
+		.video-player {
+			background-color: #555;
+			height: 200px;
+			text-align: center;
+		}
 	}
-	
-	.video-player {
-		background-color: #555;
-		height: 200px;
-		text-align: center;
-	}
-}
-/* progress bar */
-.progress {
-	border-radius: 20px !important;
-	height: 15px !important;
+	/* progress bar */
+	.progress {
+		border-radius: 20px !important;
+		height: 15px !important;
+	}	
 }

@@ -44,3 +44,6 @@
 .btn-blue {
 	@include button($btn-primary-border, lighten($btn-primary-bg, 43%),  $btn-primary-border, $btn-primary-border, lighten($btn-primary-bg, 25%),  lighten($btn-primary-bg, 5%));
 }
+.btn-link-large {
+	font-size: 15px;
+}

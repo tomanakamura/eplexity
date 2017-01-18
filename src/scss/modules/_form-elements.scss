@@ -17,16 +17,46 @@
 	    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
 	
 		.select2-selection__rendered {
-			line-height: 40px !important;
+			line-height: 38px !important;
 		}
 		.select2-selection__arrow {
-			height: 40px !important;
+			height: 38px !important;
+			background-color: $light;
 			
 			b {
 				border-top-color: $brand-primary;
 			}
 		}
+		&.secondary {
+			.select2-selection__arrow {
+				width: 35px;
+				border-left: 1px solid #d2d2d2;
+			}
+		}
+		&.unit {
+			.select2-selection__arrow {
+				width: 50px;
+				border-left: 1px solid #d2d2d2;
+				&:before {
+					content: "TB";
+					font-size: 13px;
+					font-weight: bold;
+					line-height: 40px;
+					padding-left: 10px;
+					color: $text-color;
+				}
+				b {
+					left: 35px;
+
+				}
+			}		
+		}
 	}
+}
+
+/* Input Number */
+input[type=number] {
+	width: 80px;
 }
 
 /* Input Group */
