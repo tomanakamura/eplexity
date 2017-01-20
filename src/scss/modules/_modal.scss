@@ -42,7 +42,10 @@
 				padding: 10px 0;
 				border-bottom: 1px solid $light;
 			}
-			.add-nic, .add-storage {
+			.gateway-vn {
+				padding: 10px 0;
+			}
+			.add-nic, .add-storage, .add-gateway-vn {
 				font-weight: 500;
 				display: block;
 			}

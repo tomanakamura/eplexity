@@ -4,7 +4,9 @@
 	  border: 1px solid #dfdfdf;
 	  border-radius: 5px;
 	  transition: all .3s ease;
-	
+	  &-label-size-m {
+	  	max-width: 550px !important;
+	  }	
 	  &__heading {
 	    white-space: nowrap;
 	    overflow: hidden;
@@ -15,7 +17,16 @@
 	  &__rating {
 	    margin: 10px 0;
 	  }
-	
+      &__price {
+      	margin: 0;
+      	font-size: 12px;
+      	color: $gray-base;
+      	
+      	strong {
+      	  font-size: 20px;
+      	  color: $gray;
+      	}
+      }	
 	  &--icon {
 	    padding: 25px 20px;
 	    display: flex;
@@ -150,16 +161,7 @@
       	margin-bottom: 0;
       	margin-right: 30px;
       }
-      .card__price {
-      	margin: 0;
-      	font-size: 12px;
-      	color: $gray-base;
-      	
-      	strong {
-      	  font-size: 20px;
-      	  color: $gray;
-      	}
-      }
+
   	}
   	.card-content {
       flex-grow: 1;
@@ -198,7 +200,7 @@
       h5 {
       	color: $gray-base;
       	margin-bottom: 0;
-      	margin-right: 20px;
+      	margin-right: 0px;
       }
       h4 {
       	margin-bottom: 0;
@@ -248,13 +250,60 @@
 	  	ul {
 	  		margin-top: 10px;
 	  		li {
-		      align-items: center;
-		      justify-content: space-between;	
-		      display: flex; 	
-		      border-bottom: 1px solid $gray-light;
-		      margin-bottom: 10px;
-		      padding-bottom: 10px;  		
+			      align-items: center;
+			      justify-content: space-between;	
+			      display: flex; 	
+			      border-bottom: 1px solid $gray-light;
+			      margin-bottom: 10px;
+			      padding-bottom: 10px;  		
 	      	}
+	  	}
+	  }
+	  &.gateway {
+	  	  padding: 0;
+	  	  height: auto;
+	  	  
+		  .spec-list {
+		  	ul {			
+			  	 li{
+		      		  align-items: center;
+		      		  justify-content: space-between;	
+		      		  display: flex; 			  	 
+				      border-bottom: 1px solid $gray-light;
+				      padding: 15px 20px; 
+				      
+				      h5 {
+				      	color: $text-color;
+				      	font-weight: 500;
+				      	font-size: 16px;
+				      	margin: 0;
+				      }	  
+				      span {
+				      	color: $gray-base;
+				      }		
+			  	 }
+			}  	 
+		  }	  
+	  }
+	  &.gateway-detail {
+	  	height: auto;
+	  	
+	  	ul {
+	  		  align-items: center;
+	  		  justify-content: space-between;	
+	  		  display: flex; 
+	  		  padding: 0 30px;
+	  		  
+	  		  li {
+	  		  		padding: 10px;
+	  		  		text-align: center;
+	  		  		h5 {
+	  		  			color: $gray;
+	  		  		}
+	  		  		small {
+	  		  			color: $gray-light;
+	  		  		}
+	  		  }			  	 
 	  	}
 	  }
       @include media-breakpoint-down(xs) {
@@ -264,6 +313,14 @@
       }  	
     }
     
+    .card-footer {
+	  align-items: center;
+	  justify-content: center;	
+	  display: flex; 
+      padding: 15px 20px;
+      background-color: $brand-blue;
+    }
+        
     .progress {
     	height: 10px !important;
     }   

@@ -1,29 +1,43 @@
+
 #chart-monitor {
 	padding: 20px;
+}
+
+#gateway-monitor {
+	padding: 0px;
 	
-	ul.chart-period {
-		li {
-			a {
-				color: $gray-base;
-				font-weight: 500;
-			}	
-			&.active {
-				a {
-					color: $brand-primary;
-				}
-			}
-		}
+	h4 {
+		display: inline;
+		font-weight: 500;
+		font-size: 15px;
 	}
 	
-	ul.chart-point {
-		position: relative;
-		li {
-			position: relative;
-			padding-right: 20px;		
+	#gateway-bandwidth-private, #gateway-bandwidth-public {
+		width: 100%;
+		height: 400px;
+	}
+}
+ul.chart-period {
+	li {
+		a {
+			color: $gray-base;
+			font-weight: 500;
+		}	
+		&.active {
+			a {
+				color: $brand-primary;
+			}
 		}
 	}
 }
 
+ul.chart-point {
+	position: relative;
+	li {
+		position: relative;
+		padding-right: 20px;		
+	}
+}
 .pie-chart {
 	width: 130px;
 	height: 130px;

@@ -726,6 +726,190 @@ function dataTableInit() {
       ]
   });            
   
+
+  ///////////////////////////////////////////////////////////////////
+  ///////  			Load balancer Table						/////
+  ///////////////////////////////////////////////////////////////////
+  
+  // data for load balancer table
+  var balancer_dataSet = [
+      [ "192.168.1.10", "54.99.182.209", "active", "" ],
+      [ "192.168.1.10", "54.99.182.209", "active", "" ],
+      [ "192.168.1.10", "54.99.182.209", "active", "" ]
+    ];  
+  
+  var balancer_marketplace = $('#table-balancers').DataTable( {
+      data: balancer_dataSet,
+      autoWidth: false,
+      pageLength: 5,
+      searching: false,
+      dom: '<"dataTables_top"<"row"<"col-sm-6"><"col-sm-6"f>>><"dataTables_content nowrap" t><"dataTables_bottom" p>',
+      columnDefs: [
+        {
+          targets: 0,
+          createdCell: function (td, cellData, rowData, row, col) {
+            $(td).html('<img src="images/icons/traffic-signal-network.svg" width="30px">&nbsp;&nbsp;<strong>'+cellData+'</strong>');
+          }
+        },
+        {
+          targets: 1,
+          createdCell: function (td, cellData, rowData, row, col) {
+        	  $(td).html('<span>' + cellData + '</span>');
+          }
+        }, 
+        {
+            targets: 2,
+            createdCell: function (td, cellData, rowData, row, col) {
+	            if (cellData === 'onhold') {
+	                statusText = 'ON HOLD';
+	                $(td).closest('tr').addClass('card--onhold')
+	              } else {
+	                statusText = cellData;
+	              }
+
+	              $(td).html(templates.make('status', {status : cellData, statusText : statusText}));
+            }
+        },         
+        {
+        	 targets: 3,
+    	 	 createdCell: function (td, cellData, rowData, row, col) {
+    	 		 $(td).html(templates.make('actions'));
+    	 	 }
+        }
+      ],
+      // settings for column titles and custom classes
+      columns: [
+          { title: "VirtualIP", width: '60%'},
+          { title: "Load Balancer IP Address" },
+          { title: "Status"},
+          { title: "Actions", width: '10%', className: "text-center-table" }
+      ]
+  });       
+  
+  ///////////////////////////////////////////////////////////////////
+  ///////  						VPN Table						/////
+  ///////////////////////////////////////////////////////////////////
+  
+  // data for load balancer table
+  var vpn_dataSet = [
+      [ "192.168.1.10", "54.99.182.209", "ISKAKMP", "active", "" ],
+      [ "192.168.1.10", "54.99.182.209", "ISKAKMP", "active", "" ],
+      [ "192.168.1.10", "54.99.182.209", "ISKAKMP", "active", "" ]
+    ];  
+  
+  var vpn_marketplace = $('#table-vpns').DataTable( {
+      data: vpn_dataSet,
+      autoWidth: false,
+      pageLength: 5,
+      searching: false,
+      dom: '<"dataTables_top"<"row"<"col-sm-6"><"col-sm-6"f>>><"dataTables_content nowrap" t><"dataTables_bottom" p>',
+      columnDefs: [
+        {
+          targets: 0,
+          createdCell: function (td, cellData, rowData, row, col) {
+            $(td).html('<img src="images/icons/traffic-signal-network.svg" width="30px">&nbsp;&nbsp;<strong>'+cellData+'</strong>');
+          }
+        },
+        {
+          targets: 1,
+          createdCell: function (td, cellData, rowData, row, col) {
+        	  $(td).html('<span>' + cellData + '</span>');
+          }
+        }, 
+        {
+            targets: 2,
+            createdCell: function (td, cellData, rowData, row, col) {
+          	  $(td).html('<span>' + cellData + '</span>');
+            }
+        },        
+        {
+            targets: 3,
+            createdCell: function (td, cellData, rowData, row, col) {
+	            if (cellData === 'onhold') {
+	                statusText = 'ON HOLD';
+	                $(td).closest('tr').addClass('card--onhold')
+	              } else {
+	                statusText = cellData;
+	              }
+
+	              $(td).html(templates.make('status', {status : cellData, statusText : statusText}));
+            }
+        },         
+        {
+        	 targets: 4,
+    	 	 createdCell: function (td, cellData, rowData, row, col) {
+    	 		 $(td).html(templates.make('actions'));
+    	 	 }
+        }
+      ],
+      // settings for column titles and custom classes
+      columns: [
+          { title: "SourceIP", width: '60%'},
+          { title: "Destination IP Address" },
+          { title: "VPN Type"},
+          { title: "Status"},
+          { title: "Actions", width: '10%', className: "text-center-table" }
+      ]
+  });         
+  
+  ///////////////////////////////////////////////////////////////////
+  ///////  						DNS Table						/////
+  ///////////////////////////////////////////////////////////////////
+  
+  // data for DNS table
+  var dns_dataSet = [
+      [ "NS", "domain.com", "ns2.domain.com", "3600", "" ],
+      [ "NS", "domain.com", "ns2.domain.com", "3600", "" ],
+      [ "NS", "domain.com", "ns2.domain.com", "3600", "" ]
+    ];  
+  
+  var dns_marketplace = $('#table-dns').DataTable( {
+      data: dns_dataSet,
+      autoWidth: false,
+      pageLength: 5,
+      searching: false,
+      dom: '<"dataTables_top"<"row"<"col-sm-6"><"col-sm-6"f>>><"dataTables_content nowrap" t><"dataTables_bottom" p>',
+      columnDefs: [
+        {
+          targets: 0,
+          createdCell: function (td, cellData, rowData, row, col) {
+            $(td).html('<strong>'+cellData+'</strong>');
+          }
+        },
+        {
+          targets: 1,
+          createdCell: function (td, cellData, rowData, row, col) {
+        	  $(td).html('<span>' + cellData + '</span>');
+          }
+        }, 
+        {
+            targets: 2,
+            createdCell: function (td, cellData, rowData, row, col) {
+          	  $(td).html('<span>' + cellData + '</span>');
+            }
+        },        
+        {
+            targets: 3,
+            createdCell: function (td, cellData, rowData, row, col) {
+            	  $(td).html('<span>' + cellData + '</span>');
+            }
+        },         
+        {
+        	 targets: 4,
+    	 	 createdCell: function (td, cellData, rowData, row, col) {
+    	 		 $(td).html(templates.make('actions'));
+    	 	 }
+        }
+      ],
+      // settings for column titles and custom classes
+      columns: [
+          { title: "Type", width: '10%'},
+          { title: "Name" },
+          { title: "Content", width: '50%'},
+          { title: "TTL"},
+          { title: "Actions", width: '10%', className: "text-center-table" }
+      ]
+  });  
   
 };
 

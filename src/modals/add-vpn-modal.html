@@ -1,0 +1,52 @@
+<div class="modal fade" id="add-vpn-modal" tabindex="-1" role="dialog" aria-labelledby="                                                                                                                                                                            ">
+	<div class="modal-dialog" role="document">
+    	<div class="modal-content">
+     		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        		<h2 class="modal-title section__lead" id="add-vpn-modal">Add VPN</h2>
+        		<div class="section__lead">
+		          	<p>Control infrastructure items in all your datacenters.</p>
+		        </div>
+      		</div>
+      		<div class="modal-body">
+				<div class="row">
+					<div class="col-xs-12">
+						<form name="add-vpn-form" method="post">
+							<div class="form-group">
+               					<label>VPN Name</label>
+               					<input type="text" name="vpn-name" class="form-control">
+               				</div>
+							<div class="form-group">
+               					<label>Virtual IP address</label>
+               					<input type="text" name="virtual-ip-address" class="form-control">
+               				</div> 
+               				<div class="form-group">
+               					<label>Choose Gateway</label>
+               					<select name="gateway" class="form-control">
+               						<option>gateway1</option>
+               						<option>gateway2</option>
+               						<option>gateway3</option>
+               					</select>
+               				</div>                				               				             				
+               				<div class="form-group">
+               					<label>Choose Networks</label>
+               					<select name="user-role" class="form-control" multiple="multiple" data-select-tag="true">
+               						<option selected="selected">New Virtual Machine2</option>
+               						<option selected="selected">cxos prod v1</option>
+               						<option selected="selected">cxos prod server</option>
+               						<option>cxos prod v2</option>
+               						<option>cxos prod v3</option>
+               						<option>cxos prod v4</option>
+               					</select>
+               				</div>              			
+               			</form>
+               		</div>			
+				</div>
+     		</div>
+     		<div class="modal-footer">
+     			<button class="btn btn-simple px-3" data-dismiss="modal">cancel</button>
+     			<button class="btn btn-secondary px-4">Add</button>
+     		</div>
+     	</div>
+     </div>
+</div>     		

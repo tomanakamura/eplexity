@@ -1,3 +1,9 @@
+.form-control {
+	&:focus {
+		box-shadow: 0 0px 0px rgba(0, 0, 0, 0.075) inset, 0 0 2px rgba(25, 138, 250, 0.6);
+	}
+}
+
 /* Selectbox */
 .select2-container {
 	width: 100% !important;
@@ -21,7 +27,6 @@
 		}
 		.select2-selection__arrow {
 			height: 38px !important;
-			background-color: $light;
 			
 			b {
 				border-top-color: $brand-primary;
@@ -31,6 +36,7 @@
 			.select2-selection__arrow {
 				width: 35px;
 				border-left: 1px solid #d2d2d2;
+				background-color: $light;
 			}
 		}
 		&.unit {
@@ -51,6 +57,25 @@
 				}
 			}		
 		}
+	}
+	
+	.select2-selection--multiple {
+		.select2-selection__choice {
+			background-color: $brand-blue;
+			border-color: #198afa;
+			border-radius: 2px;	
+			padding: 3px;
+		}
+		.select2-selection__choice__remove {
+			color: $brand-primary;
+		}
+	}
+	
+	&.select2-container--focus {
+		.select2-selection--multiple {
+			border-color: #198afa;
+			box-shadow: 0 0px 0px rgba(0, 0, 0, 0.075) inset, 0 0 2px rgba(25, 138, 250, 0.6);	
+		}	
 	}
 }
 

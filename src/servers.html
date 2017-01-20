@@ -3,53 +3,53 @@
 @@include('partials/sidebar.html')
 
 <div class="content">
-  <header class="section__header">
-    <div class="row">
-      <div class="col-xs-12 col-xl-6">
-        <div class="section__top">
-          <div class="section__icon"><img src="images/icons/servers.svg" width="24" alt=""></div>
-          <h2 class="section__heading">Servers</h2>
-        </div>
-        <div class="section__lead">
-          <p>Infrastructure means anything running on your Cloud Platforms.</p>
-        </div>
-      </div>
-      <div class="col-xs-12 col-xl-6">
-        <div class="section__tools">
-          <div class="btn-group">
-            <button type="button" class="btn btn-simple layout-toggle is-active js-layout-toggle" data-layout="grid">
-              <img src="images/icons/grid.svg" alt="">
-            </button>
-            <button type="button" class="btn btn-simple layout-toggle js-layout-toggle" data-layout="table">
-              <img src="images/icons/table.svg" alt="">
-            </button>
-          </div>
+	<header class="section__header">
+    	<div class="row">
+      		<div class="col-xs-12 col-xl-6">
+        		<div class="section__top">
+          			<div class="section__icon"><img src="images/icons/servers.svg" width="24" alt=""></div>
+          			<h2 class="section__heading">Servers</h2>
+        		</div>
+        		<div class="section__lead">
+          			<p>Infrastructure means anything running on your Cloud Platforms.</p>
+        		</div>
+      		</div>
+      		<div class="col-xs-12 col-xl-6">
+        		<div class="section__tools">
+          			<div class="btn-group">
+            			<button type="button" class="btn btn-simple layout-toggle is-active js-layout-toggle" data-layout="grid">
+              				<img src="images/icons/grid.svg" alt="">
+            			</button>
+            			<button type="button" class="btn btn-simple layout-toggle js-layout-toggle" data-layout="table">
+              				<img src="images/icons/table.svg" alt="">
+            			</button>
+          			</div>
 
-          <!-- js-dropdown-change class in dropdown parent for setting the clicked dropdown item data-value in input and html in button  -->
-          <div class="btn-group ml-1 js-dropdown-change">
-            <button type="button" class="btn btn-simple  dropdown-toggle" data-toggle="dropdown">
-              <span class="status">ALL</span>
-            </button>
-            <!-- js-server-dt-filter on change will be filtered table-->
-            <input type="hidden" value="" class="js-server-dt-filter">
-            <ul class="dropdown-menu">
-              <li><a href="#" data-value=""><span class="status">ALL</span></a></li>
-              <li><a href="#" data-value="ACTIVE"><span class="status status--active">ACTIVE ONLY</span></a></li>
-              <li><a href="#" data-value="ON HOLD"><span class="status status--onhold">ON HOLD</span></a></li>
-              <li><a href="#" data-value="WAITING"><span class="status status--waiting">WAITING</span></a></li>
-            </ul>
-          </div>
-          <span class="btn-group-sep"></span>
-          <a href="add-server.html" class="btn btn-secondary btn-px2">Add server</a>
-        </div>
-      </div>
-    </div>
-  </header>
-  <div class="section__content">
+          			<!-- js-dropdown-change class in dropdown parent for setting the clicked dropdown item data-value in input and html in button  -->
+          			<div class="btn-group ml-1 js-dropdown-change">
+            			<button type="button" class="btn btn-simple  dropdown-toggle" data-toggle="dropdown">
+              				<span class="status">ALL</span>
+            			</button>
+            			<!-- js-server-dt-filter on change will be filtered table-->
+            			<input type="hidden" value="" class="js-server-dt-filter">
+            			<ul class="dropdown-menu">
+              				<li><a href="#" data-value=""><span class="status">ALL</span></a></li>
+              				<li><a href="#" data-value="ACTIVE"><span class="status status--active">ACTIVE ONLY</span></a></li>
+              				<li><a href="#" data-value="ON HOLD"><span class="status status--onhold">ON HOLD</span></a></li>
+              				<li><a href="#" data-value="WAITING"><span class="status status--waiting">WAITING</span></a></li>
+            			</ul>
+          			</div>
+          			<span class="btn-group-sep"></span>
+          			<a href="add-server.html" class="btn btn-secondary btn-px2">Add server</a>
+        		</div>
+      		</div>
+    	</div>
+  	</header>
+  	<div class="section__content">
 
-      <table class="dataTable--grid" id="table-servers"></table>
+      	<table class="dataTable--grid" id="table-servers"></table>
 
-  </div>
+  	</div>
 </div>
 
 @@include('partials/footer.html')

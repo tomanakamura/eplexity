@@ -17,6 +17,7 @@
 @import "plugins/select2.min";
 @import "plugins/dropzone";
 @import "plugins/basic";
+@import "plugins/bootstrap.vertical-tabs";
 
 // @import "base/";
 @import "base/global";
@@ -33,7 +34,6 @@
 @import "layout/flex";
 @import "layout/row";
 @import "layout/card-grid";
-
 
 // @import "modules/";
 @import "modules/common";
@@ -53,6 +53,7 @@
 @import "modules/form-elements";
 @import "modules/modal";
 @import "modules/chart";
+@import "modules/ticket-panel";
 
 // bootstrap rewrite
 @import "modules/buttons";

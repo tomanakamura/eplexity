@@ -73,7 +73,7 @@ var addNicType = {
 	  }
 }
 
-//Add Nic Type
+//Add Storage
 var addStorage = {
 	  count : 1,
 	  add : function(block) {
@@ -108,7 +108,43 @@ var addStorage = {
 	  }
 }
 
+//Add Gateway Virtual Network
+var addGatewayVN = {
+	  count : 1,
+	  add : function(block) {
+		  addGatewayVN.count++;
+		  var tmpl = templates.make('gateway-vn' , {num : addGatewayVN.count })
+		  $(block).before(tmpl);
+		  
+		  customSelectInit();
+	  },
+	  remove : function(link) {
+		  addGatewayVN.count--;
+		  var $gateway_vn = $(link).closest('.gateway-vn');
+	
+		  $gateway_vn.fadeOut(300, function() {
+			  $gateway_vn.remove();
+	      	  //addStorage.updateList();
+		  });
+	  },
+	  updateList : function() {
+
+	  },
+	  init : function() {
+		  $('.add-gateway-vn').click(function(e) {
+			  e.preventDefault();
+			  addGatewayVN.add(this);
+		  });
+	
+		  $(document).on('click', '.remove-gateway-vn', function(e) {
+			  e.preventDefault();
+			  addGatewayVN.remove(this);
+		  });
+	  }
+}
+
+
 addServerName.init();
 addNicType.init();
 addStorage.init();
-
+addGatewayVN.init();

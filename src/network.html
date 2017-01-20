@@ -1,0 +1,87 @@
+@@include('partials/header.html')
+@@include('partials/sidebar.html')
+
+<div class="content">
+  	<header class="section__header">
+    	<div class="row">
+      		<div class="col-xs-12 col-xl-6">
+        		<div class="section__top">
+          			<div class="section__icon icon-big"><img src="images/icons/network.svg" width="25px" alt=""></div>
+          			<h2 class="section__heading">Network</h2>
+        		</div>
+        		<div class="section__lead">
+         	 		<p>Infrastructure means anything running on your Cloud Platforms.</p>
+        		</div>        		
+      		</div>    
+    	</div>
+  	</header>
+	<div class="section__content">
+  		<div class="row mb-3 mt-4">
+      		<div class="col-xs-12">
+	          	<!-- Nav tabs  .active class for active  section link -->
+	          	<ul class="nav nav-tabs" role="tablist">
+	            	<li role="presentation" class="active"><a href="#dns" data-toggle="tab">DNS</a></li>
+	            	<li role="presentation"><a href="#gateway"  data-toggle="tab">gateway</a></li>
+	            	<li role="presentation"><a href="#load-balancer" data-toggle="tab">load balancer</a></li>
+	            	<li role="presentation"><a href="#vpn" data-toggle="tab">vpn</a></li>
+	            	<li role="presentation"><a href="#firewall-rules" data-toggle="tab">firewall rules</a></li>
+	        	</ul>
+        	</div>
+      	</div>
+		<div class="tab-content">
+			<!-- DNS Tab Content -->
+			<div class="tab-pane active" id="dns"> 
+				<div class="row">
+					<div class="col-xs-12 col-sm-12">
+						<span class="text-left table-name">Domain Name System</span>
+					  	<a href="#" class="btn btn-secondary px-4 pull-right" data-toggle="modal" data-target="#add-dns-modal">Add DNS</a>
+					</div>
+				</div>
+				<table class="dataTable--table" id="table-dns"></table>				 	   	
+      		</div>
+      		
+			<!-- Gateway Tab Content -->
+			<div class="tab-pane" id="gateway"> 
+				<div class="row">	
+					<div class="col-xs-12 col-sm-12">
+						<span class="text-left table-name">Images</span>
+					  	<a href="#" class="btn btn-secondary px-4 pull-right" data-toggle="modal" data-target="#add-image-modal">Upload Image</a>
+					</div>
+				</div>			 
+			    <table class="dataTable--table" id="table-images"></table>   	
+      		</div>      		
+      		
+			<!-- Load balancer Tab Content -->
+			<div class="tab-pane" id="load-balancer"> 
+				<div class="row">
+					<div class="col-xs-12 col-sm-12">
+						<span class="text-left table-name">Load balancers</span>
+					  	<a href="#" class="btn btn-secondary px-4 pull-right" data-toggle="modal" data-target="#add-balancer-modal">Add Load balancer</a>
+					</div>
+				</div>
+				<table class="dataTable--table" id="table-balancers"></table>				 	   	
+      		</div>      		
+      		
+			<!-- VPN Tab Content -->
+			<div class="tab-pane" id="vpn">       		
+				<div class="row">
+					<div class="col-xs-12 col-sm-12">
+						<span class="text-left table-name">Virtual Network Networks</span>
+					  	<a href="#" class="btn btn-secondary px-4 pull-right" data-toggle="modal" data-target="#add-vpn-modal">Add a VPN</a>
+					</div>
+				</div>
+				<table class="dataTable--table" id="table-vpns"></table>	      		
+      		</div>
+      		
+			<!-- Firewall Rules Tab Content -->
+			<div class="tab-pane" id="firewall-rules">       		
+      		
+      		</div>      		
+		</div>         
+  	</div>
+</div>
+
+@@include('modals/add-balancer-modal.html')
+@@include('modals/add-dns-modal.html')
+@@include('modals/add-vpn-modal.html')
+@@include('partials/footer.html')

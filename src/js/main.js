@@ -116,10 +116,19 @@ function customSelectInit(){
 	
 	$('select').each(function(){
 		var custom_class = $(this).data('select-style');
+		var tags = false;
+		
+		console.log('tag = ' + $(this).data('select-tag'));
+		
+		if($(this).data('select-tag')){
+			tags = true;
+		}
 		
 		$(this).select2({
 			minimumResultsForSearch: Infinity,
-			containerCssClass: custom_class
+			containerCssClass: custom_class,
+			tags: true,
+			tokenSeparators: [',', ' ']
 		});
 	});
 	
@@ -158,6 +167,7 @@ function dropzoneInit(){
 // Chart Init
 function chartInit(){
 	
+	// Pie Chart Init
 	$('.pie-chart').easyPieChart({
         barColor: '#0a8dff',
 		scaleColor: false,
@@ -165,6 +175,52 @@ function chartInit(){
 		lineCap: 'square'    
 	});
 	
+	// Bandwidth Chart
+    var gateway_bandwidth_private = $('#gateway-bandwidth-private'),
+    	gateway_bandwidth_public  = $('#gateway-bandwidth-public');
+
+
+    // Random data for the charts
+    var dataBandWidth = [[1, 0], [2, 50], [3, 150], [4, 100], [5, 75], [6, 130], [7, 100], [8, 200], [9, 170], [10, 30], [11, 80], [12, 90], [13, 50]];
+
+    // Array with month labels used in Classic and Stacked chart
+    var chartHours = [[1, '10:00'], [2, '11:00'], [3, '12:00'], [4, '13:00'], [5, '14:00'], [6, '15:00'], [7, '16:00'], [8, '17:00'], [9, '18:00'], [10, '19:00'], [11, '20:00'], [12, '21:00'], [13, '22:00']];
+	
+    $.plot(gateway_bandwidth_private,
+            [
+                {
+                    label: '',
+                    data: dataBandWidth,
+                    lines: {show: true, fill: true, fillColor: {colors: [{opacity: 0.25}, {opacity: 0.25}]}},
+                    points: {show: true, radius: 4}
+                }
+            ],
+            {
+                colors: ['#7460ee', '#333333'],
+                legend: {show: true, position: 'nw', margin: [15, 10]},
+                grid: {borderWidth: 0, hoverable: true, clickable: true},
+                yaxis: {ticks: [0, 50, 100, 150, 200], ticksize: 10, tickColor: '#eeeeee'},
+                xaxis: {ticks: chartHours, tickColor: '#eeeeee'}
+            }
+        );
+	
+    $.plot(gateway_bandwidth_public,
+            [
+                {
+                    label: '',
+                    data: dataBandWidth,
+                    lines: {show: true, fill: true, fillColor: {colors: [{opacity: 0.25}, {opacity: 0.25}]}},
+                    points: {show: true, radius: 4}
+                }
+            ],
+            {
+		        colors: ['#7460ee', '#333333'],
+		        legend: {show: true, position: 'nw', margin: [15, 10]},
+		        grid: {borderWidth: 0, hoverable: true, clickable: true},
+		        yaxis: {ticks: [0, 50, 100, 150, 200],tickColor: '#eeeeee'},
+		        xaxis: {ticks: chartHours, tickColor: '#eeeeee'}
+            }
+        );	
 }
 
 $(document).ready(function() {

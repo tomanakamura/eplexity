@@ -1,0 +1,185 @@
+@@include('partials/header.html')
+@@include('partials/sidebar.html')
+
+<div class="content">
+  	<header class="section__header">
+    	<div class="row">
+      		<div class="col-xs-12 col-xl-6">
+        		<div class="section__top">
+          			<div class="section__icon icon-big"><img src="images/icons/arrow-in-circle.svg" alt=""></div>
+          			<h2 class="section__heading">Gateway 1 <img src="images/icons/info.svg" alt="" width="15px"></h2>
+        		</div>       		
+      		</div> 
+      		<div class="col-xs-12 col-xl-6">
+        		<div class="section__tools">
+          			<!-- js-dropdown-change class in dropdown parent for setting the clicked dropdown item data-value in input and html in button  -->
+          			<div class="btn-group ml-1 js-dropdown-change">
+            			<button type="button" class="btn btn-simple  dropdown-toggle" data-toggle="dropdown">
+              				<span class="status">CONFIGURE</span>
+            			</button>
+            			<!-- js-server-dt-filter on change will be filtered table-->
+            			<input type="hidden" value="" class="js-server-dt-filter">
+            			<ul class="dropdown-menu">
+              				<li><a href="#" data-value=""><span class="status">ALL</span></a></li>
+              				<li><a href="#" data-value="ACTIVE"><span class="status status--active">ACTIVE ONLY</span></a></li>
+              				<li><a href="#" data-value="ON HOLD"><span class="status status--onhold">ON HOLD</span></a></li>
+              				<li><a href="#" data-value="WAITING"><span class="status status--waiting">WAITING</span></a></li>
+            			</ul>
+          			</div>
+        		</div>
+      		</div>      		   
+    	</div>
+  	</header>
+	<div class="section__content">
+  		<div class="row mb-3 mt-4">
+      		<div class="col-xs-12">
+	          	<!-- Nav tabs  .active class for active  section link -->
+	          	<ul class="nav nav-tabs" role="tablist">
+	            	<li role="presentation"><a href="#specs" data-toggle="tab">Specs</a></li>
+	            	<li role="presentation"><a href="#rules"  data-toggle="tab">Rules</a></li>
+	            	<li role="presentation" class="active"><a href="#monitoring" data-toggle="tab">Monitoring</a></li>
+	        	</ul>
+        	</div>
+      	</div>
+		<div class="tab-content">
+			<!-- Specs Tab Content -->
+			<div class="tab-pane" id="specs"> 
+				<div class="row">
+					<div class="col-xs-12 col-sm-6">
+						<label class="card-label card-label-full">
+							<div class="card card-spec">				
+								<div class="card-header">
+									<h5>Address Type</h5>
+									<h5>Address</h5>
+									<h5>Action</h5>
+								</div>
+								<div class="card-content gateway">
+									<div class="spec-list">
+										<ul class="list-unstyled">
+											<li>
+												<h5>Gateway IP</h5> 
+												<span>54.45.34.99</span> 
+												<a href="#" class="btn btn-action dropdown-toggle" data-toggle="modal" data-target="#edit-gateway-spec-modal"></a>
+											</li>
+											<li>
+												<h5>Gateway IP</h5> 
+												<span>54.45.34.99</span> 
+												<a href="#" class="btn btn-action dropdown-toggle" data-toggle="modal" data-target="#edit-gateway-spec-modal"></a>
+											</li>	
+										</ul>
+									</div>										
+								</div>
+							</div>
+						</label>
+						<label class="card-label card-label-full">
+							<div class="card card-spec">				
+								<div class="card-header">
+									<h5>Virtual Networks</h5>
+									<h5>Action</h5>
+								</div>
+								<div class="card-content gateway">
+									<div class="spec-list">
+										<ul class="list-unstyled">
+											<li>
+												<h5>us-west-2c[172.31.0.0/20(Maps to public IP)]</h5> 
+												<a href="#" class="btn btn-action dropdown-toggle" data-toggle="modal" data-target="#edit-gateway-vn-modal"></a>
+											</li>
+											<li>
+												<h5>us-west-2c[172.31.0.0/20(Maps to public IP)]</h5> 
+												<a href="#" class="btn btn-action dropdown-toggle" data-toggle="modal" data-target="#edit-gateway-vn-modal"></a>
+											</li>	
+										</ul>
+									</div>										
+								</div>
+							</div>
+						</label>						
+					</div>
+
+					<div class="col-xs-12 col-sm-6">
+						<label class="card-label card-label-full card-label-size-m">
+							<div class="card card-spec">				
+								<div class="card-header">
+									<h4><img src="images/icons/x1.svg" width="30px" /> <small>size:</small>&nbsp;&nbsp;X1</h4>
+									<a href="#" class="btn btn-action dropdown-toggle" data-toggle="modal" data-target="#"></a>
+								</div>
+								<div class="card-content gateway-detail">
+									<ul class="list-inline">
+										<li>
+											<h5>1</h5> 
+											<small>VCPUS</small>
+										</li>
+										<li>
+											<h5>1GB</h5> 
+											<small>VRAM</small>
+										</li>
+										<li>
+											<h5>30GB</h5> 
+											<small>STORAGE</small>
+										</li>
+										<li>
+											<h5>2 TB</h5> 
+											<small>NET EGRESS</small>
+										</li>
+										<li>
+											<h5>3</h5> 
+											<small>VER</small>
+										</li>																															
+									</ul>
+								</div>
+								<div class="card-footer">
+									<p class="card__price"><strong>$50</strong> / PER MONTH</p>
+								</div>
+							</div>
+						</label>
+					</div>
+					
+				</div>				
+      		</div>
+      		
+			<!-- Rules Tab Content -->
+			<div class="tab-pane" id="rules"> 
+ 	
+      		</div>      		
+      		
+			<!-- Monitoring Tab Content -->
+			<div class="tab-pane active" id="monitoring"> 
+				<div id="gateway-monitor">
+					<div class="row">
+						<div class="col-xs-12 col-sm-12 mb-2">
+							<h4>Bandwidth(Private)</h4>
+							<ul class="list-inline chart-period pull-right">
+								<li class="active"><a href="#">Current</a></li>
+								<li><a href="#">24 hours</a></li>
+								<li><a href="#">Week</a></li>
+								<li><a href="#">Month</a></li>
+								<li><a href="#">Year</a></li>
+							</ul>
+						</div>	
+						<div class="col-xs-12 col-sm-12">
+							<div id="gateway-bandwidth-private"></div>
+						</div>						
+					</div>
+					<div class="row mt-4">
+						<div class="col-xs-12 col-sm-12 mb-2">
+							<h4>Bandwidth(Public)</h4>
+							<ul class="list-inline chart-period pull-right">
+								<li class="active"><a href="#">Current</a></li>
+								<li><a href="#">24 hours</a></li>
+								<li><a href="#">Week</a></li>
+								<li><a href="#">Month</a></li>
+								<li><a href="#">Year</a></li>
+							</ul>
+						</div>	
+						<div class="col-xs-12 col-sm-12">
+							<div id="gateway-bandwidth-public"></div>
+						</div>	
+					</div>
+				</div>					 	   	
+      		</div>      		     		
+		</div>         
+  	</div>
+</div>
+
+@@include('modals/edit-gateway-spec-modal.html')
+@@include('modals/edit-gateway-vn-modal.html')
+@@include('partials/footer.html')

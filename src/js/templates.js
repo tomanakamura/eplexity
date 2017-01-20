@@ -72,6 +72,20 @@ var templates = {
 							</div>\
 						</div>\
 					</div>',
+	'gateway-vn' : '<div class="gateway-vn">\
+						<div class="row flex flex-middle">\
+							<div class="col-xs-10 col-sm-10">\
+								<select name="virtual-network" class="form-control">\
+									<option>us-west-2c[172.31.0.0(Maps to public IP)]</option>\
+									<option>us-west-2c[172.31.0.0(Maps to public IP)]</option>\
+									<option>us-west-2c[172.31.0.0(Maps to public IP)]</option>\
+								</select>\
+							</div>\
+							<div class="col-xs-2 col-sm-2 text-center">\
+								<a class="remove-gateway-vn" href="#"><img src="images/icons/del.svg" alt=""></a>\
+							</div>\
+						</div>\
+					</div>',					
 
      make: function(templateName, data){
 	          return templates[templateName].replace(/%(\w*)%/g,function(m,key){return data.hasOwnProperty(key)?data[key]:"";});

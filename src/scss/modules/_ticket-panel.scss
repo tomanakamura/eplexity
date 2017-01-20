@@ -1,0 +1,190 @@
+#ticket-panel {	
+	.tabs-left {
+		height: 600px;
+		background-color: white;
+		
+		li{
+			padding: 15px;
+			margin: 0 !important;
+			border-bottom: 1px solid $gray-light;
+			background-color: #fff;
+			
+			&.add-ticket {
+				padding: 10px 15px;
+				border-bottom: 1px solid $gray-light;
+				
+				span {
+					font-size: 15px;
+					font-weight: 500;
+					color: $gray;
+				}
+				a {
+					color: $brand-primary;
+				}
+			}
+			&.active {
+				border: 1px solid $brand-primary;
+				background-color: $brand-blue;
+				
+				a {
+					border-bottom: none !important;
+				}
+			}		
+			a {
+				border-bottom: none !important;
+				text-transform: none !important;
+				padding-bottom: 0 !important;
+							
+				span.ticket-id {
+					color: $gray-base;
+					font-weight: normal;
+					font-size: 13px;
+				}	
+				strong {
+					display: block;
+					color: $text-color;
+					font-weight: 500;
+					padding-top: 10px;
+					font-size: 15px;
+				}
+				&:hover {
+					border-bottom: none !important;
+				}
+			}
+		}	
+		border: 1px solid $gray-light;
+	}
+
+	.tab-content {
+		padding: 0px;
+		border-style: solid solid solid none;
+    	border-width: 1px 1px 1px medium;
+    	border-color: $gray-light;
+    	
+    	.ticket-content {
+    		height: 558px;
+    	}
+    }	
+}
+
+.ticket-pan {
+	height: auto;
+	box-shadow: 0 0 15px 5px #ddd;
+	margin-top: 30px;
+	
+	.ticket-header {
+		padding: 15px 20px;	
+		background-color: white;
+		
+		span {
+			color: $text-color;
+			display: inline-block;
+			width: 65px;
+		}
+		h5 {
+			margin: 0;
+			font-size: 15px;
+			font-weight: 500;
+			display: inline-block;
+		}
+	}
+	.input-group-addon {
+		border-left: none;
+	}
+}
+
+/* Main Ticket Pan */
+.ticket-content {
+	background-color: #fff;
+	padding: 15px;
+	
+	.ticket-body {
+		margin-bottom: 20px;
+		
+		img {
+			width: 40px;
+			display: inline-block;
+			vertical-align: top;
+		}
+		
+		.ticket-message {
+			display: inline-block;
+			width: calc(100% - 60px);
+			padding-left: 30px;
+			vertical-align: middle;
+			
+			.date {
+				color: $gray-light;
+				font-size: 90%;
+				margin: 0;
+			}
+			.message {
+				color: $text-color;
+			}	
+		}
+		&.request {
+			img {
+				
+			}
+			.ticket-message { 
+				padding-left: 75px;
+				padding-right: 30px;
+				
+				.date {
+					text-align: right;
+				}
+			}
+		}    		
+	}
+}
+.send-message {
+	padding: 0;
+	background-color: transparent;
+	
+	.input-group-addon {
+		padding: 0;
+		width: 80px;
+		background-color: transparent;
+		
+		img {
+			padding: 0;
+			width: 30px;
+		}
+	}
+	input[type=text] {
+		border-left: none;
+		border-right: none;
+		background: transparent;
+		box-shadow: none;
+		
+		&:focus {
+			border-top: 1px solid $gray-light;
+			border-bottom: 1px solid $gray-light;					
+			box-shadow: none;
+		}
+	}
+	.input-group-btn {
+		color: $brand-primary;
+		background-color: transparent;
+		border-top: 1px solid $gray-light;
+		border-bottom: 1px solid $gray-light;
+		border-radius: 0;
+		position: relative;
+		
+		.btn {
+			background-color: transparent;
+			
+			&:before {
+				content: "";
+				position: absolute;
+				height: 50%;
+				width: 2px;
+				background-color: $gray-light;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				margin: auto;
+			}					
+		}
+	}
+}	

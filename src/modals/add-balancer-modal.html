@@ -1,0 +1,51 @@
+<div class="modal fade" id="add-balancer-modal" tabindex="-1" role="dialog" aria-labelledby="add-balancer-modal">
+	<div class="modal-dialog" role="document">
+    	<div class="modal-content">
+     		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        		<h2 class="modal-title section__lead" id="add-balancer-modal">Add Load Balancer</h2>
+        		<div class="section__lead">
+		          	<p>Control infrastructure items in all your datacenters.</p>
+		        </div>
+      		</div>
+      		<div class="modal-body">
+				<div class="row">
+					<div class="col-xs-12">
+						<form name="add-balancer-form" method="post">
+							<div class="form-group">
+               					<label>choose TCP\UDP:</label>
+               					<select name="protocol-type" class="form-control">
+               						<option>TCP</option>
+               						<option>UDP</option>
+               					</select>               				
+               				</div>
+							<div class="form-group">
+               					<label>Port Verification</label>
+               					<input type="text" name="port-verification" class="form-control">
+               				</div>
+							<div class="form-group">
+               					<label>Virtual IP address</label>
+               					<input type="text" name="virtual-ip-address" class="form-control">
+               				</div>                				             				
+               				<div class="form-group">
+               					<label>Choose Server</label>
+               					<select name="user-role" class="form-control" multiple="multiple" data-select-tag="true">
+               						<option selected="selected">New Virtual Machine2</option>
+               						<option selected="selected">cxos prod v1</option>
+               						<option selected="selected">cxos prod server</option>
+               						<option>cxos prod v2</option>
+               						<option>cxos prod v3</option>
+               						<option>cxos prod v4</option>
+               					</select>
+               				</div>              			
+               			</form>
+               		</div>			
+				</div>
+     		</div>
+     		<div class="modal-footer">
+     			<button class="btn btn-simple px-3" data-dismiss="modal">cancel</button>
+     			<button class="btn btn-secondary px-4">Add</button>
+     		</div>
+     	</div>
+     </div>
+</div>     		
