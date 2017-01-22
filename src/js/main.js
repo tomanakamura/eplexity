@@ -115,25 +115,38 @@ function multiStepForm(){
 function customSelectInit(){
 	
 	$('select').each(function(){
+		
 		var custom_class = $(this).data('select-style');
-		var tags = false;
-		
-		console.log('tag = ' + $(this).data('select-tag'));
-		
-		if($(this).data('select-tag')){
-			tags = true;
-		}
 		
 		$(this).select2({
 			minimumResultsForSearch: Infinity,
 			containerCssClass: custom_class,
 			tags: true,
-			tokenSeparators: [',', ' ']
+			tokenSeparators: [',', ' '],
+			templateResult: formatSelectItem,
+			templateSelection: formatSelectItem
 		});
+		
 	});
 	
 }
-
+function formatSelectItem(data) {
+	var element = $(data.element);
+	
+	if(element.data('icon')){
+		
+		console.log(element.data('icon'));
+		var new_data = $(
+				 			'<span><img src="' + element.data('icon') + '" class="select-icon" /> ' + data.text + '</span>'
+		 				  );
+		return new_data;
+		
+	} else {
+		
+		return data.text;
+	
+	}
+}
 // Video Panel Toggle
 function videoPanelToggle(){
 	
@@ -186,41 +199,49 @@ function chartInit(){
     // Array with month labels used in Classic and Stacked chart
     var chartHours = [[1, '10:00'], [2, '11:00'], [3, '12:00'], [4, '13:00'], [5, '14:00'], [6, '15:00'], [7, '16:00'], [8, '17:00'], [9, '18:00'], [10, '19:00'], [11, '20:00'], [12, '21:00'], [13, '22:00']];
 	
-    $.plot(gateway_bandwidth_private,
-            [
-                {
-                    label: '',
-                    data: dataBandWidth,
-                    lines: {show: true, fill: true, fillColor: {colors: [{opacity: 0.25}, {opacity: 0.25}]}},
-                    points: {show: true, radius: 4}
-                }
-            ],
-            {
-                colors: ['#7460ee', '#333333'],
-                legend: {show: true, position: 'nw', margin: [15, 10]},
-                grid: {borderWidth: 0, hoverable: true, clickable: true},
-                yaxis: {ticks: [0, 50, 100, 150, 200], ticksize: 10, tickColor: '#eeeeee'},
-                xaxis: {ticks: chartHours, tickColor: '#eeeeee'}
-            }
-        );
-	
-    $.plot(gateway_bandwidth_public,
-            [
-                {
-                    label: '',
-                    data: dataBandWidth,
-                    lines: {show: true, fill: true, fillColor: {colors: [{opacity: 0.25}, {opacity: 0.25}]}},
-                    points: {show: true, radius: 4}
-                }
-            ],
-            {
-		        colors: ['#7460ee', '#333333'],
-		        legend: {show: true, position: 'nw', margin: [15, 10]},
-		        grid: {borderWidth: 0, hoverable: true, clickable: true},
-		        yaxis: {ticks: [0, 50, 100, 150, 200],tickColor: '#eeeeee'},
-		        xaxis: {ticks: chartHours, tickColor: '#eeeeee'}
-            }
-        );	
+    if(gateway_bandwidth_private.length > 0){
+    	
+	    $.plot(gateway_bandwidth_private,
+	            [
+	                {
+	                    label: '',
+	                    data: dataBandWidth,
+	                    lines: {show: true, fill: true, fillColor: {colors: [{opacity: 0.25}, {opacity: 0.25}]}},
+	                    points: {show: true, radius: 4}
+	                }
+	            ],
+	            {
+	                colors: ['#7460ee', '#333333'],
+	                legend: {show: true, position: 'nw', margin: [15, 10]},
+	                grid: {borderWidth: 0, hoverable: true, clickable: true},
+	                yaxis: {ticks: [0, 50, 100, 150, 200], ticksize: 10, tickColor: '#eeeeee'},
+	                xaxis: {ticks: chartHours, tickColor: '#eeeeee'}
+	            }
+	     );
+	    
+    }
+    
+    if(gateway_bandwidth_public.length > 0){
+    	
+	    $.plot(gateway_bandwidth_public,
+	            [
+	                {
+	                    label: '',
+	                    data: dataBandWidth,
+	                    lines: {show: true, fill: true, fillColor: {colors: [{opacity: 0.25}, {opacity: 0.25}]}},
+	                    points: {show: true, radius: 4}
+	                }
+	            ],
+	            {
+			        colors: ['#7460ee', '#333333'],
+			        legend: {show: true, position: 'nw', margin: [15, 10]},
+			        grid: {borderWidth: 0, hoverable: true, clickable: true},
+			        yaxis: {ticks: [0, 50, 100, 150, 200],tickColor: '#eeeeee'},
+			        xaxis: {ticks: chartHours, tickColor: '#eeeeee'}
+	            }
+	    );
+	    
+    }
 }
 
 $(document).ready(function() {

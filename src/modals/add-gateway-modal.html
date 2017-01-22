@@ -1,0 +1,54 @@
+<div class="modal fade" id="add-gateway-modal" tabindex="-1" role="dialog" aria-labelledby="add-gateway-modal">
+	<div class="modal-dialog" role="document">
+    	<div class="modal-content">
+     		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        		<h2 class="modal-title section__lead" id="add-gateway-modal">Add a Gateway</h2>
+      		</div>
+      		<div class="modal-body">
+				<div class="row">
+					<div class="col-xs-12">
+						<form name="add-gateway-form" method="post">
+							<div class="form-group">
+               					<label>choose a Datacenter</label>
+               					<select name="datacenter" class="form-control">
+               						<option data-icon="images/vmware.png" selected>CXOS-VMW-Prod</option>
+               						<option data-icon="images/vmware.png">CXOS-VMW-Prod</option>
+               						<option data-icon="images/vmware.png">CXOS-VMW-Prod</option>
+               					</select>               				
+               				</div>
+							<div class="form-group">
+               					<label>Gateway Name</label>
+               					<input type="text" name="gateway-name" class="form-control">
+               				</div>
+							<div class="form-group">
+               					<label>IP Address</label>
+               					<input type="text" name="ip-address" class="form-control">
+               				</div>     
+							<div class="form-group">
+               					<label>Sized of GW</label>
+               					<select name="gw-size" class="form-control">
+               						<option selected>Small</option>
+               						<option>Large</option>
+               					</select>               				
+               				</div>               				           				             				
+               				<div class="form-group">
+               					<label>Choose Virtual Cloud(s) within your Datacenter</label>
+               					<select name="virtual-cloud" class="form-control" multiple="multiple">
+               						<option selected="selected">esxi131.eplx.den3.loc[Den3-eplx01-mgmt-1099]</option>
+               						<option selected="selected">esxi131.eplx.den3.loc[Den3-eplx01-mgmt-1099]</option>
+									<option>esxi131.eplx.den3.loc[Den3-eplx01-mgmt-1099]</option>
+									<option>esxi131.eplx.den3.loc[Den3-eplx01-mgmt-1099]</option>
+               					</select>
+               				</div>              			
+               			</form>
+               		</div>			
+				</div>
+     		</div>
+     		<div class="modal-footer">
+     			<button class="btn btn-simple px-3" data-dismiss="modal">cancel</button>
+     			<button class="btn btn-secondary px-4">Next Step</button>
+     		</div>
+     	</div>
+     </div>
+</div>     		

@@ -8,21 +8,6 @@
   background-color: #d8d8d8;
 }
 
-.text-bold {
-  letter-spacing: 0.43px;
-  color: $gray4B;
-  font-weight: 500;
-  font-size: 15px;
-}
-
-.text-light {
-  color: rgba($text-color, .9);
-  font-size: 12px;
-  font-weight: 500;
-  text-transform: uppercase;
-  line-height: 1;
-}
-
 .help-block {
 	font-size: 12px;	
 }
@@ -40,6 +25,9 @@
 	&-border {
 		border: none !important;
 	}
+	&-visible {
+		visibility: hidden !important;
+	}	
 }
 
 // Image & Text Align
@@ -123,7 +111,4 @@ table {
 }
 .a-center {
 	margin-top: 15%;
-}
-.no-visible {
-	visibility: hidden !important;
 }

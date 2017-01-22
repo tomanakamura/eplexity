@@ -86,7 +86,39 @@ var templates = {
 							</div>\
 						</div>\
 					</div>',					
-
+    'security-policy' :  '<div class="security-policy">\
+							<div class="row flex flex-middle">\
+								<div class="col-xs-3 col-sm-3">\
+									<select name="type" class="form-control">\
+										<option>SSH</option>\
+										<option>SSH</option>\
+										<option>SSH</option>\
+									</select>\
+								</div>\
+								<div class="col-xs-2 col-sm-2">\
+									<input type="text" class="form-control" value="All" />\
+								</div>\
+								<div class="col-xs-2 col-sm-2">\
+									<input type="text" class="form-control" value="0-65563" />\
+								</div>\
+								<div class="col-xs-3 col-sm-3">\
+									<div class="input-group">\
+										<div class="input-group-btn">\
+											<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Custom </button>\
+											<ul class="dropdown-menu">\
+												<li><a href="#">Custom</a></li>\
+												<li><a href="#">Custom</a></li>\
+												<li><a href="#">Custom</a></li>\
+											</ul>\
+										</div>\
+										<input type="text" name="destination" class="form-control">\
+									</div>\
+								</div>\
+								<div class="col-xs-2 col-sm-2 text-center">\
+									<a class="remove-policy" href="#"><img src="images/icons/del.svg" alt=""></a>\
+								</div>\
+							</div>\
+						</div>',
      make: function(templateName, data){
 	          return templates[templateName].replace(/%(\w*)%/g,function(m,key){return data.hasOwnProperty(key)?data[key]:"";});
 	        }

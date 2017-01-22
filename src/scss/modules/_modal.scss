@@ -38,16 +38,20 @@
 				margin: 0;
 			}
 			
-			.nic-type, .storage {
+			.nic-type, .storage, .security-policy {
 				padding: 10px 0;
 				border-bottom: 1px solid $light;
 			}
 			.gateway-vn {
 				padding: 10px 0;
 			}
-			.add-nic, .add-storage, .add-gateway-vn {
+			.add-nic, .add-storage, .add-gateway-vn, .add-policy {
 				font-weight: 500;
 				display: block;
+			}
+			.input-group-btn button.dropdown-toggle {
+				background-color: #fff;
+				color: $text-color;
 			}
 		}
 	}
@@ -58,7 +62,13 @@
 	.toggle.btn {
 		display: block;
 		width: 85px !important;
+		
+		&.btn-primary {
+			display: inline-block;
+			margin-left: 15px;
+		}
 	}
+	
 	.video-panel {
 		border: 1px solid #ffbc01;
 		padding: 10px;

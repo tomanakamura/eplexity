@@ -44,11 +44,11 @@
 			<div class="tab-pane" id="gateway"> 
 				<div class="row">	
 					<div class="col-xs-12 col-sm-12">
-						<span class="text-left table-name">Images</span>
-					  	<a href="#" class="btn btn-secondary px-4 pull-right" data-toggle="modal" data-target="#add-image-modal">Upload Image</a>
+						<span class="text-left table-name">Gateway's</span>
+					  	<a href="#" class="btn btn-secondary px-4 pull-right" data-toggle="modal" data-target="#add-gateway-modal">Add a Gateway</a>
 					</div>
 				</div>			 
-			    <table class="dataTable--table" id="table-images"></table>   	
+			    <table class="dataTable--table" id="table-gateways"></table>   	
       		</div>      		
       		
 			<!-- Load balancer Tab Content -->
@@ -75,7 +75,13 @@
       		
 			<!-- Firewall Rules Tab Content -->
 			<div class="tab-pane" id="firewall-rules">       		
-      		
+				<div class="row">
+					<div class="col-xs-12 col-sm-12">
+						<span class="text-left table-name">Firewall</span>
+					  	<a href="#" class="btn btn-secondary px-4 pull-right" data-toggle="modal" data-target="#add-firewall-modal">Add</a>
+					</div>
+				</div>  
+				<table class="dataTable--table" id="table-firewalls"></table>	    		
       		</div>      		
 		</div>         
   	</div>
@@ -84,4 +90,6 @@
 @@include('modals/add-balancer-modal.html')
 @@include('modals/add-dns-modal.html')
 @@include('modals/add-vpn-modal.html')
+@@include('modals/add-gateway-modal.html')
+@@include('modals/add-firewall-modal.html')
 @@include('partials/footer.html')

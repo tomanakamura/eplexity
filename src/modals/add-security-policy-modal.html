@@ -1,0 +1,116 @@
+<div class="modal fade" id="add-security-policy-modal" tabindex="-1" role="dialog" aria-labelledby="add-security-policy-modal">
+	<div class="modal-dialog modal-lg" role="document">
+    	<div class="modal-content">
+     		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        		<h2 class="modal-title section__lead" id="add-security-policy-modal">Add Security Policy</h2>
+      		</div>
+      		<div class="modal-body">
+				<div class="row">
+					<div class="col-xs-12">
+						<form name="add-security-policy-form" method="post">
+							<div class="form-group">
+               					<label>Security Group Name</label>
+								<input type="text" name="security-group-name" class="form-control">              				
+               				</div>
+							<div class="form-group">
+               					<label>Description</label>
+               					<input type="text" name="description" class="form-control">
+               				</div>              				             				
+               				<div class="form-group">
+               					<label>Cloud firewall</label>
+               					<select name="user-role" class="form-control" multiple="multiple">
+               						<option selected="selected">Filewall1</option>
+               						<option selected="selected">Filewall2</option>
+               						<option>Filewall13</option>
+               						<option>Filewall14</option>
+               					</select>
+               				</div> 
+							<div class="form-group">
+               					<label>Rule</label>
+               					<input checked data-toggle="toggle" data-style="android" data-onstyle="primary" type="checkbox">
+               				</div>
+					  		<div class="row mb-2 mt-2">
+					      		<div class="col-xs-12">
+						          	<!-- Nav tabs  .active class for active  section link -->
+						          	<ul class="nav nav-tabs" role="tablist">
+						            	<li role="presentation"><a href="#inbound" data-toggle="tab">Inbound</a></li>
+						            	<li role="presentation" class="active"><a href="#outbound"  data-toggle="tab">Outbound</a></li>
+						        	</ul>
+					        	</div>
+					      	</div>
+							<div class="tab-content">
+								<!-- Inbound Tab Content -->
+								<div class="tab-pane" id="inbound">
+		               						               												
+               					</div> 
+								<!-- Outbound Tab Content -->
+								<div class="tab-pane active" id="outbound">
+					      			<div class="modal-spec-title">
+										<div class="row">
+											<div class="col-xs-12 col-sm-3">
+												<h4>Type</h4>
+											</div>
+											<div class="col-xs-12 col-sm-2">
+												<h4>Protocol</h4>
+											</div>
+											<div class="col-xs-12 col-sm-2">
+												<h4>Port Range</h4>
+											</div>	
+											<div class="col-xs-12 col-sm-3">
+												<h4>Destination</h4>
+											</div>	
+											<div class="col-xs-12 col-sm-2">
+												<h4 class="text-center">Actions</h4>
+											</div>																														
+										</div>
+									</div>
+					      			<div class="modal-spec-info">
+					      				<div class="security-policy">
+											<div class="row flex flex-middle">
+												<div class="col-xs-3 col-sm-3">
+													<select name="type" class="form-control">
+														<option>SSH</option>
+														<option>SSH</option>
+														<option>SSH</option>
+													</select>
+												</div>											
+												<div class="col-xs-2 col-sm-2">
+													<input type="text" class="form-control" value="All" />
+												</div>
+												<div class="col-xs-2 col-sm-2">
+													<input type="text" class="form-control" value="0-65563" />
+												</div>
+												<div class="col-xs-3 col-sm-3">
+													<div class="input-group">
+														<div class="input-group-btn">
+													        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Custom </button>
+													        <ul class="dropdown-menu">
+													          	<li><a href="#">Custom</a></li>
+													          	<li><a href="#">Custom</a></li>
+													          	<li><a href="#">Custom</a></li>
+													        </ul>
+														</div>													
+														<input type="text" name="destination" class="form-control">
+													</div>												
+												</div>							
+												<div class="col-xs-2 col-sm-2 text-center">
+													<a class="remove-security-policy" href="#"><img src="images/icons/del.svg" alt=""/></a>
+												</div>												
+											</div>
+										</div>	      			
+										<a href="#" class="add-security-policy nopadding mt-2">+Add Disk</a>		
+									</div>			               						               												
+               					</div>               					
+               				</div>	              				                				             			
+               			</form>
+               		</div>			
+				</div>
+     		</div>
+     		<div class="modal-footer">
+     			<button class="btn btn-simple px-3" data-dismiss="modal">cancel</button>
+     			<button class="btn btn-secondary px-4">Add</button>
+     		</div>
+     	</div>
+     </div>
+</div>     		

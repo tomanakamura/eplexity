@@ -143,8 +143,77 @@ var addGatewayVN = {
 	  }
 }
 
+//Add Security Policy
+var addSecurityPolicy = {
+	  count : 1,
+	  add : function(block) {
+		  addSecurityPolicy.count++;
+		  var tmpl = templates.make('security-policy' , {num : addSecurityPolicy.count })
+		  $(block).before(tmpl);
+		  
+		  customSelectInit();
+	  },
+	  remove : function(link) {
+		  addSecurityPolicy.count--;
+		  var $security_policy = $(link).closest('.security-policy');
+	
+		  $security_policy.fadeOut(300, function() {
+			  $security_policy.remove();
+		  });
+	  },
+	  updateList : function() {
+
+	  },
+	  init : function() {
+		  $('.add-security-policy').click(function(e) {
+			  e.preventDefault();
+			  addSecurityPolicy.add(this);
+		  });
+	
+		  $(document).on('click', '.remove-security-policy', function(e) {
+			  e.preventDefault();
+			  addSecurityPolicy.remove(this);
+		  });
+	  }
+}
+
+//Add Policy
+var addPolicy = {
+	  count : 1,
+	  add : function(block) {
+		  addPolicy.count++;
+		  var tmpl = templates.make('policy' , {num : addPolicy.count })
+		  $(block).before(tmpl);
+		  
+		  customSelectInit();
+	  },
+	  remove : function(link) {
+		  addPolicy.count--;
+		  var $policy = $(link).closest('.policy');
+	
+		  $policy.fadeOut(300, function() {
+			  $policy.remove();
+		  });
+	  },
+	  updateList : function() {
+
+	  },
+	  init : function() {
+		  $('.add-policy').click(function(e) {
+			  e.preventDefault();
+			  addPolicy.add(this);
+		  });
+	
+		  $(document).on('click', '.remove-policy', function(e) {
+			  e.preventDefault();
+			  addPolicy.remove(this);
+		  });
+	  }
+}
 
 addServerName.init();
 addNicType.init();
 addStorage.init();
 addGatewayVN.init();
+addSecurityPolicy.init();
+addPolicy.init();

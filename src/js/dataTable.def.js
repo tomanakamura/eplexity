@@ -570,7 +570,7 @@ function dataTableInit() {
       [ "1234", "Scheduled Maintenance on 24/12/2016", "That's great, I was hoping it wouldn't happen right when it did happen, but now...", "onhold" ]
    ];  
   
-  var table_marketplace = $('#table-tickets').DataTable( {
+  var table_ticket = $('#table-tickets').DataTable( {
       data: ticket_dataSet,
       autoWidth: false,
       pageLength: 5,
@@ -640,7 +640,7 @@ function dataTableInit() {
       [ "Power off", "jc@eplexity.com", "2 minutes ago", "15 seconds" ]
     ];  
   
-  var history_marketplace = $('#table-histories').DataTable( {
+  var table_history = $('#table-histories').DataTable( {
       data: history_dataSet,
       autoWidth: false,
       pageLength: 5,
@@ -692,7 +692,7 @@ function dataTableInit() {
       [ "Aug 14 2015", "109GiB", "" ]
     ];  
   
-  var backup_marketplace = $('#table-backups').DataTable( {
+  var table_backup = $('#table-backups').DataTable( {
       data: backup_dataSet,
       autoWidth: false,
       pageLength: 5,
@@ -738,7 +738,7 @@ function dataTableInit() {
       [ "192.168.1.10", "54.99.182.209", "active", "" ]
     ];  
   
-  var balancer_marketplace = $('#table-balancers').DataTable( {
+  var table_balancer = $('#table-balancers').DataTable( {
       data: balancer_dataSet,
       autoWidth: false,
       pageLength: 5,
@@ -797,7 +797,7 @@ function dataTableInit() {
       [ "192.168.1.10", "54.99.182.209", "ISKAKMP", "active", "" ]
     ];  
   
-  var vpn_marketplace = $('#table-vpns').DataTable( {
+  var table_vpn = $('#table-vpns').DataTable( {
       data: vpn_dataSet,
       autoWidth: false,
       pageLength: 5,
@@ -863,7 +863,7 @@ function dataTableInit() {
       [ "NS", "domain.com", "ns2.domain.com", "3600", "" ]
     ];  
   
-  var dns_marketplace = $('#table-dns').DataTable( {
+  var table_dns = $('#table-dns').DataTable( {
       data: dns_dataSet,
       autoWidth: false,
       pageLength: 5,
@@ -910,6 +910,322 @@ function dataTableInit() {
           { title: "Actions", width: '10%', className: "text-center-table" }
       ]
   });  
+ 
+  ///////////////////////////////////////////////////////////////////
+  ///////  					Route Nat Table						/////
+  ///////////////////////////////////////////////////////////////////
+  
+  // data for Nat table
+  var nat_dataSet = [
+      [ "SN1", "SNAT", "1", "d10plSu3", "" ],
+      [ "SN1", "SNAT", "1", "d10plSu3", "" ],
+      [ "SN1", "SNAT", "1", "d10plSu3", "" ]
+    ];  
+  
+  var table_nat = $('#table-nats').DataTable( {
+      data: nat_dataSet,
+      autoWidth: false,
+      pageLength: 5,
+      searching: false,
+      dom: '<"dataTables_top"<"row"<"col-sm-6"><"col-sm-6"f>>><"dataTables_content nowrap" t><"dataTables_bottom" p>',
+      columnDefs: [
+        {
+          targets: 0,
+          createdCell: function (td, cellData, rowData, row, col) {
+            $(td).html('<h3>'+cellData+'</h3>');
+          }
+        },
+        {
+          targets: 1,
+          createdCell: function (td, cellData, rowData, row, col) {
+        	  $(td).html('<span>' + cellData + '</span>');
+          }
+        }, 
+        {
+            targets: 2,
+            createdCell: function (td, cellData, rowData, row, col) {
+          	  $(td).html('<span>' + cellData + '</span>');
+            }
+        },        
+        {
+            targets: 3,
+            createdCell: function (td, cellData, rowData, row, col) {
+            	  $(td).html('<span>' + cellData + '</span>');
+            }
+        },         
+        {
+        	 targets: 4,
+    	 	 createdCell: function (td, cellData, rowData, row, col) {
+    	 		 $(td).html(templates.make('actions'));
+    	 	 }
+        }
+      ],
+      // settings for column titles and custom classes
+      columns: [
+          { title: "Name", width: '20%'},
+          { title: "Type" },
+          { title: "Priority"},
+          { title: "Applied To", width: '40%'},
+          { title: "Actions", width: '10%', className: "text-center-table" }
+      ]
+  });    
+  
+  ///////////////////////////////////////////////////////////////////
+  ///////  			Security Policy Table						/////
+  ///////////////////////////////////////////////////////////////////
+  
+  // data for Plicy table
+  var policy_dataSet = [
+      [ "Security policy name", "That's great, I was hoping it wouldn't happen right when it did happen, but now...", "images/vmware.png", "" ],
+      [ "Security policy name", "That's great, I was hoping it wouldn't happen right when it did happen, but now...", "images/vmware.png", "" ],
+      [ "Security policy name", "That's great, I was hoping it wouldn't happen right when it did happen, but now...", "images/vmware.png", "" ]
+    ];  
+  
+  var table_policy = $('#table-policies').DataTable( {
+      data: policy_dataSet,
+      autoWidth: false,
+      pageLength: 5,
+      searching: false,
+      dom: '<"dataTables_top"<"row"<"col-sm-6"><"col-sm-6"f>>><"dataTables_content nowrap" t><"dataTables_bottom" p>',
+      columnDefs: [
+        {
+          targets: 0,
+          createdCell: function (td, cellData, rowData, row, col) {
+            $(td).html('<h3>'+cellData+'</h3>');
+          }
+        },
+        {
+          targets: 1,
+          createdCell: function (td, cellData, rowData, row, col) {
+        	  $(td).html('<span>' + cellData + '</span>');
+          }
+        }, 
+        {
+            targets: 2,
+            createdCell: function (td, cellData, rowData, row, col) {
+          	  $(td).html('<img src="' + cellData + '">');
+            }
+        },               
+        {
+        	 targets: 3,
+    	 	 createdCell: function (td, cellData, rowData, row, col) {
+    	 		 $(td).html(templates.make('actions'));
+    	 	 }
+        }
+      ],
+      // settings for column titles and custom classes
+      columns: [
+          { title: "Name", width: '20%'},
+          { title: "Description", width: '50%'},
+          { title: "Cloud"},
+          { title: "Actions", width: '10%', className: "text-center-table" }
+      ]
+  });  
+ 
+  ///////////////////////////////////////////////////////////////////
+  ///////  				Staic routes Table						/////
+  ///////////////////////////////////////////////////////////////////
+  
+  // data for static route table
+  var static_route_dataSet = [
+      [ "10.10.10.0/24", "192.168.3.1", "Eth0", "Any", "" ],
+      [ "10.10.10.0/24", "192.168.3.1", "Eth0", "Any", "" ],
+      [ "10.10.10.0/24", "192.168.3.1", "Eth0", "Any", "" ]
+    ];  
+  
+  var table_static_route = $('#table-static-routes').DataTable( {
+      data: static_route_dataSet,
+      autoWidth: false,
+      pageLength: 5,
+      searching: false,
+      dom: '<"dataTables_top"<"row"<"col-sm-6"><"col-sm-6"f>>><"dataTables_content nowrap" t><"dataTables_bottom" p>',
+      columnDefs: [
+        {
+          targets: 0,
+          createdCell: function (td, cellData, rowData, row, col) {
+            $(td).html('<h3>'+cellData+'</h3>');
+          }
+        },
+        {
+          targets: 1,
+          createdCell: function (td, cellData, rowData, row, col) {
+        	  $(td).html('<span>' + cellData + '</span>');
+          }
+        }, 
+        {
+            targets: 2,
+            createdCell: function (td, cellData, rowData, row, col) {
+          	  $(td).html('<span>' + cellData + '</span>');
+            }
+        },        
+        {
+            targets: 3,
+            createdCell: function (td, cellData, rowData, row, col) {
+            	  $(td).html('<span>' + cellData + '</span>');
+            }
+        },         
+        {
+        	 targets: 4,
+    	 	 createdCell: function (td, cellData, rowData, row, col) {
+    	 		 $(td).html(templates.make('actions'));
+    	 	 }
+        }
+      ],
+      // settings for column titles and custom classes
+      columns: [
+          { title: "Network", width: '50%'},
+          { title: "Next Hoop" },
+          { title: "Interface"},
+          { title: "Description"},
+          { title: "Actions", width: '10%', className: "text-center-table" }
+      ]
+  });  
+  
+  ///////////////////////////////////////////////////////////////////
+  ///////  					Firewall Table						/////
+  ///////////////////////////////////////////////////////////////////
+  
+  // data for firewall table
+  var firewall_dataSet = [
+      [ "Demo Firewall Rules", "192.168.10.22/10:10", "192.168.10.22/10:10", "active", "" ],
+      [ "Demo Firewall Rules", "192.168.10.22/10:10", "192.168.10.22/10:10", "active", "" ],
+      [ "Demo Firewall Rules", "192.168.10.22/10:10", "192.168.10.22/10:10", "active", "" ]
+    ];  
+  
+  var table_firewall = $('#table-firewalls').DataTable( {
+      data: firewall_dataSet,
+      autoWidth: false,
+      pageLength: 5,
+      searching: false,
+      dom: '<"dataTables_top"<"row"<"col-sm-6"><"col-sm-6"f>>><"dataTables_content nowrap" t><"dataTables_bottom" p>',
+      columnDefs: [
+        {
+          targets: 0,
+          createdCell: function (td, cellData, rowData, row, col) {
+            $(td).html('<img src="images/icons/firewall.svg" width="30px">&nbsp;&nbsp;<strong>'+cellData+'</strong>');
+          }
+        },
+        {
+          targets: 1,
+          createdCell: function (td, cellData, rowData, row, col) {
+        	  $(td).html('<span>' + cellData + '</span>');
+          }
+        }, 
+        {
+            targets: 2,
+            createdCell: function (td, cellData, rowData, row, col) {
+          	  $(td).html('<span>' + cellData + '</span>');
+            }
+        },        
+        {
+            targets: 3,
+            createdCell: function (td, cellData, rowData, row, col) {
+	            if (cellData === 'onhold') {
+	                statusText = 'ON HOLD';
+	                $(td).closest('tr').addClass('card--onhold')
+	              } else {
+	                statusText = cellData;
+	              }
+
+	              $(td).html(templates.make('status', {status : cellData, statusText : statusText}));
+            }
+        },         
+        {
+        	 targets: 4,
+    	 	 createdCell: function (td, cellData, rowData, row, col) {
+    	 		 $(td).html(templates.make('actions'));
+    	 	 }
+        }
+      ],
+      // settings for column titles and custom classes
+      columns: [
+          { title: "Name", width: '40%'},
+          { title: "Source(port after colon)" },
+          { title: "Destination(port after colon)"},
+          { title: "Status"},
+          { title: "Actions", width: '10%', className: "text-center-table" }
+      ]
+  });  
+  
+  ///////////////////////////////////////////////////////////////////
+  ///////  					Gateway Table						/////
+  ///////////////////////////////////////////////////////////////////
+  
+  // data for gateway table
+  var gateway_dataSet = [
+      [ "GATEWAY A", "54.32.23.22", "54.32.23.22", "x1", "EU(Frankfurt)", "active", "" ],
+      [ "GATEWAY A", "54.32.23.22", "54.32.23.22", "x5", "EU(Frankfurt)", "active", "" ],
+      [ "GATEWAY A", "54.32.23.22", "54.32.23.22", "x3", "EU(Frankfurt)", "active", "" ]
+    ];  
+  
+  var table_gateway = $('#table-gateways').DataTable( {
+      data: gateway_dataSet,
+      autoWidth: false,
+      pageLength: 5,
+      searching: false,
+      dom: '<"dataTables_top"<"row"<"col-sm-6"><"col-sm-6"f>>><"dataTables_content nowrap" t><"dataTables_bottom" p>',
+      columnDefs: [
+        {
+          targets: 0,
+          createdCell: function (td, cellData, rowData, row, col) {
+            $(td).html('<img src="images/icons/gateway.svg" width="30px">&nbsp;&nbsp;<strong>'+cellData+'</strong>');
+          }
+        },
+        {
+          targets: 1,
+          createdCell: function (td, cellData, rowData, row, col) {
+        	  $(td).html('<span>' + cellData + '</span>');
+          }
+        }, 
+        {
+            targets: 2,
+            createdCell: function (td, cellData, rowData, row, col) {
+          	  $(td).html('<span>' + cellData + '</span>');
+            }
+        },  
+        {
+            targets: 3,
+            createdCell: function (td, cellData, rowData, row, col) {
+          	  $(td).html('<span><img src="images/icons/' + cellData + '.svg" width="30px">&nbsp;&nbsp;' + cellData + '</span>');
+            }
+        },  
+        {
+            targets: 4,
+            createdCell: function (td, cellData, rowData, row, col) {
+          	  $(td).html('<span>' + cellData + '</span>');
+            }
+        },          
+        {
+            targets: 5,
+            createdCell: function (td, cellData, rowData, row, col) {
+	            if (cellData === 'onhold') {
+	                statusText = 'ON HOLD';
+	                $(td).closest('tr').addClass('card--onhold')
+	              } else {
+	                statusText = cellData;
+	              }
+
+	              $(td).html(templates.make('status', {status : cellData, statusText : statusText}));
+            }
+        },         
+        {
+        	 targets: 6,
+    	 	 createdCell: function (td, cellData, rowData, row, col) {
+    	 		 $(td).html(templates.make('actions'));
+    	 	 }
+        }
+      ],
+      // settings for column titles and custom classes
+      columns: [
+          { title: "Name"},
+          { title: "Gateway IP" },
+          { title: "Router IP"},
+          { title: "Size"},
+          { title: "Datacenter"},
+          { title: "Status"},
+          { title: "Actions", width: '10%', className: "text-center-table" }
+      ]
+  });             
   
 };
 

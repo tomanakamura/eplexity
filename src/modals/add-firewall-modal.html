@@ -1,0 +1,78 @@
+<div class="modal fade" id="add-firewall-modal" tabindex="-1" role="dialog" aria-labelledby="add-firewall-modal">                                                                                                                                                                         ">
+	<div class="modal-dialog" role="document">
+    	<div class="modal-content">
+     		<div class="modal-header">
+        		<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        		<h2 class="modal-title section__lead" id="add-firewall-modal">Add Firewall</h2>
+      		</div>
+      		<div class="modal-body">
+				<div class="row">
+					<div class="col-xs-12">
+						<form name="add-firewall-form" method="post">
+							<div class="form-group">
+               					<label>What cloud we are connecting your Fw to?</label>
+               					<select name="cloud" class="form-control">
+               						<option data-icon="images/vmware.png" selected>VMWare1</option>
+               						<option data-icon="images/vmware.png">VMWare2</option>
+               						<option data-icon="images/vmware.png">VMWare3</option>
+               					</select>
+               				</div>
+               				<div class="form-group">
+               					<label>Agent</label>
+               					<select name="agent" class="form-control">
+               						<option>DC Agent</option>
+               						<option>DC Agent</option>
+               						<option>DC Agent</option>
+               					</select>
+               				</div> 
+               				<div class="form-group">
+               					<label>What type?</label>
+               					<select name="firewall-type" class="form-control">
+               						<option data-icon="images/cisco.png">CISCO</option>
+               						<option data-icon="images/cisco.png">CISCO</option>
+               						<option data-icon="images/cisco.png">CISCO</option>
+               					</select>
+               				</div>                				               				
+							<div class="form-group">
+								<div class="row">
+									<div class="col-xs-10">
+               							<label>DNS name</label>
+               							<input type="text" name="dns-name" class="form-control">
+               						</div>
+               						<div class="col-xs-2">
+               							<label>Api Port</label>
+               							<input type="text" name="api-port" class="form-control">
+               						</div>
+               					</div>		
+               				</div> 
+							<div class="form-group">
+								<div class="row">
+									<div class="col-xs-6">
+               							<label>Internal IP</label>
+               							<input type="text" name="internal-ip" class="form-control">
+               						</div>
+               						<div class="col-xs-6">
+               							<label>Public IP</label>
+               							<input type="text" name="public-ip" class="form-control">
+               						</div>
+               					</div>		
+               				</div>
+							<div class="form-group">
+       							<label>User Name</label>
+       							<input type="text" name="username" class="form-control">
+            				</div>               				
+							<div class="form-group">
+       							<label>Password</label>
+       							<input type="password" name="password" class="form-control">
+            				</div>                				              				               				             				             			
+               			</form>
+               		</div>			
+				</div>
+     		</div>
+     		<div class="modal-footer">
+     			<button class="btn btn-simple px-3" data-dismiss="modal">cancel</button>
+     			<button class="btn btn-secondary px-4">Add</button>
+     		</div>
+     	</div>
+     </div>
+</div>     		
