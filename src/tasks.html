@@ -1,0 +1,31 @@
+@@include('partials/header.html')
+
+@@include('partials/sidebar.html')
+
+<div class="content">
+  	<header class="section__header">
+	    <div class="row">
+	      	<div class="col-xs-12 col-xl-6">
+	        	<div class="section__top">
+	          		<div class="section__icon icon-big"><img src="images/icons/star.svg" alt=""></div>
+	          		<h2 class="section__heading">Administration</h2>
+	        	</div>
+	        	<div class="section__lead">
+	          		<p>Infrastructure means anything running on your Cloud Platforms.</p>
+	        	</div>        
+	      	</div>     
+	    </div>
+  	</header>
+ 	<div class="section__content">
+		<div class="row"> 
+			<div class="col-xs-12 col-sm-12">
+				<span class="text-left table-name">Tasks</span>
+			</div>	
+		</div>
+		<table class="dataTable--table" id="table-tasks"></table> 
+	</div>
+</div>
+
+
+@@include('modals/add-provider-modal.html')
+@@include('partials/footer.html')

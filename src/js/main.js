@@ -18,7 +18,9 @@ function layoutToggleInit(table) {
 // Switch Button
 function switchButton(){
 	
-	$('input[data-toggle="toggle"]').bootstrapToggle();
+	$('input[data-toggle="toggle"]').bootstrapToggle({
+		style: 'custom-switch-toggle'
+	});
 	
     $('input[data-toggle="toggle"]').change(function() {
     	
@@ -29,6 +31,15 @@ function switchButton(){
     	}
     	
     });	
+}
+
+// Custom Spinner
+function spinboxInit(){
+	
+	$("input.spinner").TouchSpin({
+		verticalbuttons: true
+    });
+	
 }
 
 //Multi Step Form
@@ -249,6 +260,8 @@ $(document).ready(function() {
 	layoutToggleInit('#table-servers');
 	
 	switchButton();
+	
+	spinboxInit();
 	
 	multiStepForm();
 	

@@ -180,9 +180,6 @@ function dataTableInit() {
   	  }
   } );    
   
-  
-  
-  
   ///////////////////////////////////////////////////////////////////
   ///////  					Cloud Table							/////
   ///////////////////////////////////////////////////////////////////
@@ -1226,6 +1223,65 @@ function dataTableInit() {
           { title: "Actions", width: '10%', className: "text-center-table" }
       ]
   });             
+  
+  ///////////////////////////////////////////////////////////////////
+  ///////  					Tasks Table							/////
+  ///////////////////////////////////////////////////////////////////
+  
+  // data for tasks table
+  var task_dataSet = [
+      [ "yPFNnisruo", "CXOS-VMW-DEV", "active", "Waiting for OVA file." ],
+      [ "yPFNnisruo", "CXOS-VMW-DEV", "active", "Waiting for OVA file." ],
+      [ "yPFNnisruo", "CXOS-VMW-DEV", "active", "Waiting for OVA file." ]
+    ];  
+  
+  var table_task = $('#table-tasks').DataTable( {
+      data: task_dataSet,
+      autoWidth: false,
+      pageLength: 5,
+      searching: false,
+      dom: '<"dataTables_top"<"row"<"col-sm-6"><"col-sm-6"f>>><"dataTables_content nowrap" t><"dataTables_bottom" p>',
+      columnDefs: [
+        {
+          targets: 0,
+          createdCell: function (td, cellData, rowData, row, col) {
+            $(td).html('<h3>'+cellData+'</h3>');
+          }
+        },
+        {
+          targets: 1,
+          createdCell: function (td, cellData, rowData, row, col) {
+        	  $(td).html('<span>' + cellData + '</span>');
+          }
+        },         
+        {
+            targets: 2,
+            createdCell: function (td, cellData, rowData, row, col) {
+	            if (cellData === 'onhold') {
+	                statusText = 'ON HOLD';
+	                $(td).closest('tr').addClass('card--onhold')
+	              } else {
+	                statusText = cellData;
+	              }
+
+	              $(td).html(templates.make('status', {status : cellData, statusText : statusText}));
+            }
+        },         
+        {
+        	 targets: 3,
+    	 	 createdCell: function (td, cellData, rowData, row, col) {
+    	 		 $(td).html('<span>' + cellData + '</span>');
+    	 	 }
+        }
+      ],
+      // settings for column titles and custom classes
+      columns: [
+          { title: "ID", width: "60%"},
+          { title: "Datacenter" },
+          { title: "Status"},
+          { title: "Detail"}
+      ]
+  });   
   
 };
 

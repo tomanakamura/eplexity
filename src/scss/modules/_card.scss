@@ -90,7 +90,7 @@
   	.card-header {
 		text-align: center;
 		border-bottom: 1px solid rgba(#dedede, .5);
-		padding: 15px 20px;
+		padding: 20px 20px;
 		height: 100px;
 	    
 	    img {
@@ -103,10 +103,47 @@
   	.card-content {
 	      flex-grow: 1;
 	      padding: 15px 20px;
+	      
+	      .card__desc {
+	      	h5 {
+	      		font-size: 11px;
+	      		color: $gray-base;
+	      		letter-spacing: 1px;
+	      	}
+	      	.card__heading {
+	      		font-size: 23px;
+	      		margin-bottom: 5px;
+	      	}
+	      }
+	      .card-price-detail {
+	      	margin-top: 30px;
+	      	justify-content: space-between;
+	      	.card__price {
+	      		font-size: 15px;
+	      		strong {
+	      			color: $brand-primary;
+	      			font-weight: 500;
+	      			font-size: 17px;
+	      		}
+	      	}
+	      	a.btn {
+	      		display: none;
+	      		img {
+	      			vertical-align: middle;
+	      			padding-left:3px;
+	      		}
+	      	}
+	      }
      }   
+     
+     &:hover {
+     	.card-price-detail a.btn {
+     		display: inline-block;
+     	}
+     }
   }	
 
-  // card marketplace
+  // card backup
   &-backup {
     display: flex;
     flex-direction: column; 

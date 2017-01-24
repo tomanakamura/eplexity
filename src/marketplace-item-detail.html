@@ -1,0 +1,74 @@
+@@include('partials/header.html')
+
+@@include('partials/sidebar.html')
+
+<div class="content">
+  	<header class="section__header no-border">
+	    <div class="row">
+	      	<div class="col-xs-12 col-xl-6">
+	        	<div class="section__top">
+	        		<div class="section__icon icon-big"><img src="images/icons/arrow-in-circle.svg" alt=""></div>
+	          		<h2 class="section__heading">Item Details</h2>
+	        	</div>       
+	      	</div>     
+	    </div>
+  	</header>
+ 	<div class="section__content">
+		<div class="product-list">
+			<div class="row">
+				<div class="product product-single">
+					<div class="col-xs-8 col-sm-8">
+						<div class="product-detail">
+							<h5 class="product-cat">LOGRHYTHM - CXC</h5>
+							<h2 class="product-name">LogRhythm-V1.4</h2>
+							<p class="description">Commercially approved version of LogRhythm version 1.4. To be used in commercial markets.</p>
+							<ul class="list-inline deployment-time">
+								<li>
+									<img src="images/icons/dashed-clock.svg">
+									<div class="time-limit">
+										<h5>Deployment time:</h5>
+										<h4>Under 10 mins</h4>
+									</div>
+								</li>
+								<li>
+									<img src="images/icons/dashed-clock.svg">
+									<div class="time-limit">
+										<h5>Deployment time:</h5>
+										<h4>Under 10 mins</h4>
+									</div>
+								</li>							
+							</ul>
+						</div>	
+						<div class="divide"></div>
+						<ul class="product-price">
+							<li>
+								<h5>Price</h5>
+								<p class="main-price"><strong>$988.90</strong> / MONTH</p>
+							</li>
+							<li>	
+								<h5>Setup</h5>
+								<p class="setup-price">$480.00</p>	
+							</li>	
+							<li class="qty">
+								<div class="form-group">
+									<label>QTY</label>
+									<input type="number" name="qty" class="form-control" />
+								</div>
+							</li>
+							<li>	
+								<a href="#" class="btn btn-secondary">Add to my account</a>	
+							</li>	
+						</ul>						
+					</div>
+					<div class="col-xs-4 col-sm-4 product-image">
+						<img src="images/logrhythm.png" alt="" />
+					</div>
+				</div>			
+			</div>
+		</div>
+	</div>
+</div>
+
+
+@@include('modals/add-provider-modal.html')
+@@include('partials/footer.html')

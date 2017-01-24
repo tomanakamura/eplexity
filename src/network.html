@@ -25,6 +25,7 @@
 	            	<li role="presentation"><a href="#load-balancer" data-toggle="tab">load balancer</a></li>
 	            	<li role="presentation"><a href="#vpn" data-toggle="tab">vpn</a></li>
 	            	<li role="presentation"><a href="#firewall-rules" data-toggle="tab">firewall rules</a></li>
+	            	<li role="presentation"><a href="#security-policy" data-toggle="tab">Security Policy</a></li>
 	        	</ul>
         	</div>
       	</div>
@@ -56,7 +57,7 @@
 				<div class="row">
 					<div class="col-xs-12 col-sm-12">
 						<span class="text-left table-name">Load balancers</span>
-					  	<a href="#" class="btn btn-secondary px-4 pull-right" data-toggle="modal" data-target="#add-balancer-modal">Add Load balancer</a>
+					  	<a href="#" class="btn btn-secondary px-4 pull-right" data-toggle="modal" data-target="#add-load-balancer-rule-modal">Add Load balancer</a>
 					</div>
 				</div>
 				<table class="dataTable--table" id="table-balancers"></table>				 	   	
@@ -82,12 +83,25 @@
 					</div>
 				</div>  
 				<table class="dataTable--table" id="table-firewalls"></table>	    		
-      		</div>      		
+      		</div>    
+      		
+			<!-- Security Policy Tab Content -->
+			<div class="tab-pane" id="security-policy">       		
+				<div class="row">
+					<div class="col-xs-12 col-sm-12">
+						<span class="text-left table-name">Security Policy</span>
+					  	<a href="#" class="btn btn-secondary px-4 pull-right" data-toggle="modal" data-target="#add-security-policy-modal">Add</a>
+					</div>
+				</div>  
+				<table class="dataTable--table" id="table-policies"></table>	    		
+      		</div>        		  		
 		</div>         
   	</div>
 </div>
 
 @@include('modals/add-balancer-modal.html')
+@@include('modals/add-load-balancer-rule-modal.html')
+@@include('modals/add-security-policy-modal.html')
 @@include('modals/add-dns-modal.html')
 @@include('modals/add-vpn-modal.html')
 @@include('modals/add-gateway-modal.html')
