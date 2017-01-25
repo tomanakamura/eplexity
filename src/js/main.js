@@ -36,9 +36,6 @@ function switchButton(){
 // Custom Spinner
 function spinboxInit(){
 	
-	$("input.spinner").TouchSpin({
-		verticalbuttons: true
-    });
 	
 }
 

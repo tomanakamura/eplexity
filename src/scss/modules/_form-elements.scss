@@ -117,7 +117,6 @@ td .toggle.btn {
 	margin: auto;
 }
 
-
 /* dropzone */
 .dropzone {
 	min-height: auto;
@@ -133,3 +132,29 @@ td .toggle.btn {
 	}	
 }
 
+/* Spinner */
+.spinner {
+	input[type=text] {
+		width: 55px !important;
+		border-right-width: 0;
+		box-shadow: 0 1px 0px rgba(0, 0, 0, 0.075) inset;
+		
+		&:focus {
+			border-right-width: 1px; 
+			box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+		}
+	}
+	
+	.input-group-addon {
+		padding: 0 10px;
+		box-shadow: 0 1px 0px rgba(0, 0, 0, 0.075) inset;
+		
+		.spin-up, .spin-down {
+			height: 12px !important;
+			width: 8px !important;
+			img {
+				width: 13px;
+			}	
+		}
+	}
+}
